@@ -1,0 +1,16 @@
+{
+  "HOLA1": [
+    {
+      "block_id": "HOLA1_block_1",
+      "node": "node_placeholder"
+    },
+    {
+      "block_id": "HOLA1_block_2",
+      "node": "node_placeholder"
+    },
+    {
+      "block_id": "HOLA1_block_3",
+      "node": "node_placeholder"
+    }
+  ]
+}

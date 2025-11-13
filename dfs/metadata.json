@@ -1,0 +1,12 @@
+{
+  "example.txt": [
+    {
+      "block_id": "block1",
+      "node": "node1"
+    },
+    {
+      "block_id": "block2",
+      "node": "node2"
+    }
+  ]
+}
