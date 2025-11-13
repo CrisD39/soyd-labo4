@@ -6,7 +6,7 @@ import (
 	"dfs/internal/metadata"
 )
 
-type Service interface {
+type Namenode interface {
 	HandlePut(filename string, sizeBytes int64) ([]metadata.BlockLocation, error)
 	HandleGet(filename string) ([]metadata.BlockLocation, bool, error)
 	HandleInfo(filename string) ([]metadata.BlockLocation, bool, error)
@@ -14,15 +14,15 @@ type Service interface {
 }
 
 // implementación concreta de Service.
-type service struct {
+type namenode struct {
 	store metadata.Store
 }
 
-func NewService(store metadata.Store) Service {
-	return &service{store: store}
+func NewService(store metadata.Store) Namenode {
+	return &namenode{store: store}
 }
 
-func (s *service) HandlePut(filename string, sizeBytes int64) ([]metadata.BlockLocation, error) {
+func (s *namenode) HandlePut(filename string, sizeBytes int64) ([]metadata.BlockLocation, error) {
 	// tamaño de bloque
 	const blockSize int64 = 1024 // 1 KB
 
@@ -55,17 +55,17 @@ func (s *service) HandlePut(filename string, sizeBytes int64) ([]metadata.BlockL
 	return locations, nil
 }
 
-func (s *service) HandleGet(filename string) ([]metadata.BlockLocation, bool, error) {
+func (s *namenode) HandleGet(filename string) ([]metadata.BlockLocation, bool, error) {
 	locations, exists := s.store.GetFile(filename)
 	return locations, exists, nil
 }
 
-func (s *service) HandleInfo(filename string) ([]metadata.BlockLocation, bool, error) {
+func (s *namenode) HandleInfo(filename string) ([]metadata.BlockLocation, bool, error) {
 	// va a ser lo mismo que el get por ahora, leugo con el protocolo cambiaria creo
 	locations, exists := s.store.GetFile(filename)
 	return locations, exists, nil
 }
 
-func (s *service) HandleList() ([]string, error) {
+func (s *namenode) HandleList() ([]string, error) {
 	return s.store.ListFiles()
 }

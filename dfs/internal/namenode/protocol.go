@@ -15,12 +15,11 @@ type Server interface {
 
 type tcpServer struct {
 	addr    string
-	service Service
+	service Namenode
 	ln      net.Listener
 }
 
-
-func NewTCPServer(addr string, svc Service) Server {
+func NewTCPServer(addr string, svc Namenode) Server {
 	return &tcpServer{
 		addr:    addr, // ej: ":3000"
 		service: svc,
