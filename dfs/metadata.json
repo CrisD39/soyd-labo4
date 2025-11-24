@@ -1,12 +1,273 @@
 {
-  "example.txt": [
+  "Jorge": [
     {
       "block_id": "block1",
-      "node": "node1"
+      "replicas": null
     },
     {
       "block_id": "block2",
-      "node": "node2"
+      "replicas": null
+    }
+  ],
+  "SEGUNDO": [
+    {
+      "block_id": "block1",
+      "replicas": null
+    },
+    {
+      "block_id": "block2",
+      "replicas": null
+    }
+  ],
+  "cienaños": [
+    {
+      "block_id": "cienaños_block_1",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    }
+  ],
+  "cienaños2": [
+    {
+      "block_id": "cienaños2_block_1",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "cienaños2_block_2",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "cienaños2_block_3",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "cienaños2_block_4",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "cienaños2_block_5",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "cienaños2_block_6",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "cienaños2_block_7",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "cienaños2_block_8",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    }
+  ],
+  "graninquisidor": [
+    {
+      "block_id": "graninquisidor_block_1",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "graninquisidor_block_2",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "graninquisidor_block_3",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "graninquisidor_block_4",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "graninquisidor_block_5",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "graninquisidor_block_6",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "graninquisidor_block_7",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "graninquisidor_block_8",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "graninquisidor_block_9",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "graninquisidor_block_10",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "graninquisidor_block_11",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "graninquisidor_block_12",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "graninquisidor_block_13",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "graninquisidor_block_14",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "graninquisidor_block_15",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "graninquisidor_block_16",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "graninquisidor_block_17",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "graninquisidor_block_18",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "graninquisidor_block_19",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "graninquisidor_block_20",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "graninquisidor_block_21",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "graninquisidor_block_22",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "graninquisidor_block_23",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "graninquisidor_block_24",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "graninquisidor_block_25",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    },
+    {
+      "block_id": "graninquisidor_block_26",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
     }
   ]
 }

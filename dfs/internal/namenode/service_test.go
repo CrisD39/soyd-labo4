@@ -58,10 +58,11 @@ func assertDeepEqual(t *testing.T, want, got any, msg string) {
 
 // ----------------- tests -----------------
 
-// 1) HandlePut: calcula bien la cantidad de bloques y guarda en el store
+// 1) HandlePut: calcula bien la cantidad de bloques, reparte datanodes y guarda en el store
 func TestHandlePutBlocksAndStore(t *testing.T) {
 	store := newFakeStore()
-	svc := NewService(store)
+	dataNodes := []string{"dn1:4001", "dn2:4002"}
+	svc := NewService(store, dataNodes)
 
 	filename := "file.txt"
 
@@ -73,7 +74,8 @@ func TestHandlePutBlocksAndStore(t *testing.T) {
 	assertEqual(t, 1, len(locs), "expected 1 block for 1024 bytes")
 
 	assertEqual(t, "file.txt_block_1", locs[0].BlockID, "block id mismatch")
-	assertEqual(t, "node_placeholder", locs[0].Node, "node placeholder mismatch")
+	// Primer bloque debe ir al primer datanode (round-robin arrancando en 0)
+	assertEqual(t, dataNodes[0], locs[0].Node, "unexpected node for first block")
 
 	// Verificamos que se haya guardado en el store
 	stored, ok := store.GetFile(filename)
@@ -88,12 +90,20 @@ func TestHandlePutBlocksAndStore(t *testing.T) {
 		t.Fatalf("HandlePut (1025 bytes) returned error: %v", err)
 	}
 	assertEqual(t, 2, len(locs2), "expected 2 blocks for 1025 bytes")
+
+	// Chequeamos que siga el round-robin:
+	// - ya usamos dataNodes[0] en el primer HandlePut
+	// - ahora deberían ser: dataNodes[1], dataNodes[0]
+	assertEqual(t, "big.txt_block_1", locs2[0].BlockID, "block id mismatch for big.txt block 1")
+	assertEqual(t, "big.txt_block_2", locs2[1].BlockID, "block id mismatch for big.txt block 2")
+	assertEqual(t, dataNodes[1], locs2[0].Node, "unexpected node for big.txt first block")
+	assertEqual(t, dataNodes[0], locs2[1].Node, "unexpected node for big.txt second block")
 }
 
 // 2) HandlePut con tamaño inválido
 func TestHandlePutInvalidSize(t *testing.T) {
 	store := newFakeStore()
-	svc := NewService(store)
+	svc := NewService(store, []string{"dn1:4001"})
 
 	if _, err := svc.HandlePut("bad.txt", 0); err == nil {
 		t.Fatalf("expected error for non-positive size, got nil")
@@ -103,7 +113,7 @@ func TestHandlePutInvalidSize(t *testing.T) {
 // 3) HandleGet: debe devolver lo que está en el store
 func TestHandleGet(t *testing.T) {
 	store := newFakeStore()
-	svc := NewService(store)
+	svc := NewService(store, []string{"dn1:4001"})
 
 	filename := "example.txt"
 	expected := []metadata.BlockLocation{
@@ -138,7 +148,7 @@ func TestHandleGet(t *testing.T) {
 // 4) HandleInfo: mismo comportamiento básico que HandleGet
 func TestHandleInfo(t *testing.T) {
 	store := newFakeStore()
-	svc := NewService(store)
+	svc := NewService(store, []string{"dn1:4001"})
 
 	filename := "info.txt"
 	expected := []metadata.BlockLocation{
@@ -162,7 +172,7 @@ func TestHandleInfo(t *testing.T) {
 // 5) HandleList: devuelve la lista de archivos que ve el store
 func TestHandleList(t *testing.T) {
 	store := newFakeStore()
-	svc := NewService(store)
+	svc := NewService(store, []string{"dn1:4001"})
 
 	_ = store.PutFile("a.txt", nil)
 	_ = store.PutFile("b.txt", nil)

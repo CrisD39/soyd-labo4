@@ -1,0 +1,770 @@
+2025-11-24T12:43:48.3311638-03:00 [127.0.0.1:56378] 2025-11-24T12:43:48.3307722-03:00 [namenode] [INFO] NameNode iniciando...
+2025-11-24T12:43:48.3745343-03:00 [127.0.0.1:56378] 2025-11-24T12:43:48.3743572-03:00 [namenode] [INFO] DataNodes configurados: [localhost:4001 localhost:4002]
+2025-11-24T12:43:48.3745502-03:00 [127.0.0.1:56378] 2025-11-24T12:43:48.3744544-03:00 [namenode] [INFO] Creando servicio NameNode con 2 DataNodes
+2025-11-24T12:43:48.3745569-03:00 [127.0.0.1:56378] 2025-11-24T12:43:48.374469-03:00 [namenode] [INFO] Namenode TCP escuchando en :3000
+2025-11-24T12:43:48.3746654-03:00 [127.0.0.1:56378] 2025-11-24T12:43:48.3746201-03:00 [namenode] [INFO] NameNode TCP escuchando en :3000
+2025-11-24T12:43:48.3746749-03:00 [127.0.0.1:56378] 2025-11-24T12:43:48.3746512-03:00 [namenode] [INFO] NameNode HTTP escuchando en :8080
+2025-11-24T12:44:58.1310079-03:00 [127.0.0.1:56388] 2025-11-24T12:44:58.1306259-03:00 [datanode-4001] [INFO] DataNode iniciando en :4002
+2025-11-24T12:44:58.1311304-03:00 [127.0.0.1:56388] 2025-11-24T12:44:58.1309645-03:00 [datanode-4001] [INFO] Creando fileDataNode con baseDir=./data
+2025-11-24T12:44:58.1315249-03:00 [127.0.0.1:56388] 2025-11-24T12:44:58.1314169-03:00 [datanode-4001] [INFO] Datanode escuchando en :4002
+2025-11-24T12:44:58.1315306-03:00 [127.0.0.1:56388] 2025-11-24T12:44:58.1314454-03:00 [datanode-4001] [INFO] DataNode escuchando en :4002 y listo para recibir WRITE/READ
+2025-11-24T12:45:24.5521525-03:00 [127.0.0.1:56398] 2025-11-24T12:45:24.551678-03:00 [datanode-4002] [INFO] DataNode iniciando en :4002
+2025-11-24T12:45:24.5521805-03:00 [127.0.0.1:56398] 2025-11-24T12:45:24.5520665-03:00 [datanode-4002] [INFO] Creando fileDataNode con baseDir=./data
+2025-11-24T12:45:24.5526843-03:00 [127.0.0.1:56398] 2025-11-24T12:45:24.5525712-03:00 [datanode-4002] [INFO] Datanode escuchando en :4002
+2025-11-24T12:45:24.5526909-03:00 [127.0.0.1:56398] 2025-11-24T12:45:24.5526002-03:00 [datanode-4002] [INFO] DataNode escuchando en :4002 y listo para recibir WRITE/READ
+2025-11-24T12:46:02.5221867-03:00 [127.0.0.1:56405] 2025-11-24T12:46:02.521731-03:00 [client] [INFO] cliente iniciado con args: [./bin/dfsclient ls]
+2025-11-24T12:46:02.5222337-03:00 [127.0.0.1:56405] 2025-11-24T12:46:02.5221725-03:00 [client] [INFO] comando recibido: ls
+2025-11-24T12:46:02.5222464-03:00 [127.0.0.1:56405] 2025-11-24T12:46:02.522214-03:00 [client] [INFO] ejecutando ls()
+2025-11-24T12:46:02.5223188-03:00 [127.0.0.1:56405] 2025-11-24T12:46:02.5222416-03:00 [client] [ERROR] error en ls: error enviando LS al namenode: dial tcp 127.0.0.1:3001: connect: connection refused
+2025-11-24T12:46:54.0697917-03:00 [127.0.0.1:56418] 2025-11-24T12:46:54.0695429-03:00 [client] [INFO] cliente iniciado con args: [./bin/dfsclient ls]
+2025-11-24T12:46:54.0698056-03:00 [127.0.0.1:56418] 2025-11-24T12:46:54.0697697-03:00 [client] [INFO] comando recibido: ls
+2025-11-24T12:46:54.0698243-03:00 [127.0.0.1:56378] 2025-11-24T12:46:54.0697479-03:00 [namenode] [INFO] Nueva conexión desde 127.0.0.1:56419
+2025-11-24T12:46:54.0698316-03:00 [127.0.0.1:56378] 2025-11-24T12:46:54.06978-03:00 [namenode] [DEBUG] handleConn iniciado para 127.0.0.1:56419
+2025-11-24T12:46:54.0698358-03:00 [127.0.0.1:56378] 2025-11-24T12:46:54.0697985-03:00 [namenode] [DEBUG] Mensaje recibido de 127.0.0.1:56419: "LS"
+2025-11-24T12:46:54.0698432-03:00 [127.0.0.1:56378] 2025-11-24T12:46:54.0698065-03:00 [namenode] [INFO] LS recibido desde 127.0.0.1:56419
+2025-11-24T12:46:54.0698455-03:00 [127.0.0.1:56378] 2025-11-24T12:46:54.0698148-03:00 [namenode] [INFO] HandleList: listando archivos
+2025-11-24T12:46:54.0698475-03:00 [127.0.0.1:56378] 2025-11-24T12:46:54.0698218-03:00 [namenode] [INFO] HandleList: se encontraron 4 archivos
+2025-11-24T12:46:54.0698511-03:00 [127.0.0.1:56418] 2025-11-24T12:46:54.0697956-03:00 [client] [INFO] ejecutando ls()
+2025-11-24T12:46:54.0699436-03:00 [127.0.0.1:56418] 2025-11-24T12:46:54.0699089-03:00 [client] [INFO] LS: el namenode devolvió 4 archivos
+2025-11-24T12:46:54.0699712-03:00 [127.0.0.1:56418] 2025-11-24T12:46:54.0699407-03:00 [client] [INFO] ls devolvió 4 archivos
+2025-11-24T12:46:54.0699731-03:00 [127.0.0.1:56378] 2025-11-24T12:46:54.0699235-03:00 [namenode] [DEBUG] Conexión cerrada desde 127.0.0.1:56419: EOF
+2025-11-24T12:53:22.6118856-03:00 [127.0.0.1:56492] 2025-11-24T12:53:22.6115901-03:00 [client] [INFO] cliente iniciado con args: [./bin/dfsclient put jorgepistola.txt graninquisidor]
+2025-11-24T12:53:22.6119065-03:00 [127.0.0.1:56492] 2025-11-24T12:53:22.6118647-03:00 [client] [INFO] comando recibido: put
+2025-11-24T12:53:22.6119819-03:00 [127.0.0.1:56492] 2025-11-24T12:53:22.6118851-03:00 [client] [INFO] ejecutando put(local=jorgepistola.txt, remote=graninquisidor)
+2025-11-24T12:53:22.6184641-03:00 [127.0.0.1:56492] 2025-11-24T12:53:22.6183407-03:00 [client] [INFO] Iniciando PUT local=jorgepistola.txt remote=graninquisidor size=26426 bytes
+2025-11-24T12:53:22.6187171-03:00 [127.0.0.1:56378] 2025-11-24T12:53:22.6186052-03:00 [namenode] [INFO] Nueva conexión desde 127.0.0.1:56493
+2025-11-24T12:53:22.6187241-03:00 [127.0.0.1:56378] 2025-11-24T12:53:22.6186366-03:00 [namenode] [DEBUG] handleConn iniciado para 127.0.0.1:56493
+2025-11-24T12:53:22.6187302-03:00 [127.0.0.1:56378] 2025-11-24T12:53:22.6186535-03:00 [namenode] [DEBUG] Mensaje recibido de 127.0.0.1:56493: "PUT graninquisidor 26426"
+2025-11-24T12:53:22.6187327-03:00 [127.0.0.1:56378] 2025-11-24T12:53:22.6186783-03:00 [namenode] [INFO] HandlePut TCP: filename=graninquisidor size=26426 desde 127.0.0.1:56493
+2025-11-24T12:53:22.6187351-03:00 [127.0.0.1:56378] 2025-11-24T12:53:22.6186885-03:00 [namenode] [INFO] HandlePut: filename=graninquisidor size=26426
+2025-11-24T12:53:22.6187372-03:00 [127.0.0.1:56378] 2025-11-24T12:53:22.6186994-03:00 [namenode] [INFO] HandlePut: archivo graninquisidor se partió en 26 bloques
+2025-11-24T12:53:22.6192058-03:00 [127.0.0.1:56378] 2025-11-24T12:53:22.6191588-03:00 [namenode] [INFO] HandlePut: metadata de graninquisidor persistida correctamente
+2025-11-24T12:53:22.619331-03:00 [127.0.0.1:56378] 2025-11-24T12:53:22.6192655-03:00 [namenode] [DEBUG] Enviando METADATA PUT para graninquisidor a 127.0.0.1:56493
+2025-11-24T12:53:22.6194626-03:00 [127.0.0.1:56378] 2025-11-24T12:53:22.6193969-03:00 [namenode] [DEBUG] Conexión cerrada desde 127.0.0.1:56493: EOF
+2025-11-24T12:53:22.6198733-03:00 [127.0.0.1:56492] 2025-11-24T12:53:22.6197311-03:00 [client] [INFO] Plan de PUT recibido: file=graninquisidor block_size=1024 blocks=26
+2025-11-24T12:53:22.6198798-03:00 [127.0.0.1:56492] 2025-11-24T12:53:22.6197695-03:00 [client] [DEBUG] Subiendo bloque 0 (graninquisidor_block_1) rango=[0:1024] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:53:22.6199058-03:00 [127.0.0.1:56492] 2025-11-24T12:53:22.6197947-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_1 a datanode localhost:4001 (size=1024)
+2025-11-24T12:53:22.619977-03:00 [127.0.0.1:56492] 2025-11-24T12:53:22.6199157-03:00 [client] [ERROR] error en put(local=jorgepistola.txt, remote=graninquisidor): error subiendo bloque 0 (graninquisidor_block_1): error guardando bloque en datanode localhost:4001: no se pudo conectar al datanode localhost:4001: dial tcp 127.0.0.1:4001: connect: connection refused
+2025-11-24T12:54:55.3206021-03:00 [127.0.0.1:56504] 2025-11-24T12:54:55.3203232-03:00 [datanode-4001] [INFO] DataNode iniciando en :4002
+2025-11-24T12:54:55.3206432-03:00 [127.0.0.1:56504] 2025-11-24T12:54:55.3205882-03:00 [datanode-4001] [INFO] Creando fileDataNode con baseDir=./data
+2025-11-24T12:54:55.3208805-03:00 [127.0.0.1:56504] 2025-11-24T12:54:55.3208066-03:00 [datanode-4001] [INFO] Datanode escuchando en :4002
+2025-11-24T12:54:55.3209128-03:00 [127.0.0.1:56504] 2025-11-24T12:54:55.3208297-03:00 [datanode-4001] [INFO] DataNode escuchando en :4002 y listo para recibir WRITE/READ
+2025-11-24T12:55:49.872785-03:00 [127.0.0.1:56511] 2025-11-24T12:55:49.8724129-03:00 [datanode-4001] [INFO] DataNode iniciando en :4002
+2025-11-24T12:55:49.8728093-03:00 [127.0.0.1:56511] 2025-11-24T12:55:49.8727153-03:00 [datanode-4001] [INFO] Creando fileDataNode con baseDir=./data
+2025-11-24T12:55:49.8731611-03:00 [127.0.0.1:56511] 2025-11-24T12:55:49.8730623-03:00 [datanode-4001] [INFO] Datanode escuchando en :4001
+2025-11-24T12:55:49.873174-03:00 [127.0.0.1:56511] 2025-11-24T12:55:49.8730898-03:00 [datanode-4001] [INFO] DataNode escuchando en :4002 y listo para recibir WRITE/READ
+2025-11-24T12:55:55.6519339-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.6516993-03:00 [client] [INFO] cliente iniciado con args: [./bin/dfsclient put jorgepistola.txt graninquisidor]
+2025-11-24T12:55:55.6519707-03:00 [127.0.0.1:56378] 2025-11-24T12:55:55.6519119-03:00 [namenode] [INFO] Nueva conexión desde 127.0.0.1:56518
+2025-11-24T12:55:55.6519759-03:00 [127.0.0.1:56378] 2025-11-24T12:55:55.651946-03:00 [namenode] [DEBUG] handleConn iniciado para 127.0.0.1:56518
+2025-11-24T12:55:55.6519849-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.6519104-03:00 [client] [INFO] comando recibido: put
+2025-11-24T12:55:55.6519896-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.6519251-03:00 [client] [INFO] ejecutando put(local=jorgepistola.txt, remote=graninquisidor)
+2025-11-24T12:55:55.6519926-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.6519326-03:00 [client] [INFO] Iniciando PUT local=jorgepistola.txt remote=graninquisidor size=26426 bytes
+2025-11-24T12:55:55.6524938-03:00 [127.0.0.1:56378] 2025-11-24T12:55:55.6524419-03:00 [namenode] [DEBUG] Mensaje recibido de 127.0.0.1:56518: "PUT graninquisidor 26426"
+2025-11-24T12:55:55.6525056-03:00 [127.0.0.1:56378] 2025-11-24T12:55:55.6524739-03:00 [namenode] [INFO] HandlePut TCP: filename=graninquisidor size=26426 desde 127.0.0.1:56518
+2025-11-24T12:55:55.6525447-03:00 [127.0.0.1:56378] 2025-11-24T12:55:55.6524989-03:00 [namenode] [INFO] HandlePut: filename=graninquisidor size=26426
+2025-11-24T12:55:55.6525523-03:00 [127.0.0.1:56378] 2025-11-24T12:55:55.6525159-03:00 [namenode] [INFO] HandlePut: archivo graninquisidor se partió en 26 bloques
+2025-11-24T12:55:55.6525643-03:00 [127.0.0.1:56378] 2025-11-24T12:55:55.652531-03:00 [namenode] [INFO] HandlePut: metadata de graninquisidor persistida correctamente
+2025-11-24T12:55:55.6525944-03:00 [127.0.0.1:56378] 2025-11-24T12:55:55.6525454-03:00 [namenode] [DEBUG] Enviando METADATA PUT para graninquisidor a 127.0.0.1:56518
+2025-11-24T12:55:55.6526751-03:00 [127.0.0.1:56378] 2025-11-24T12:55:55.6525797-03:00 [namenode] [DEBUG] Conexión cerrada desde 127.0.0.1:56518: EOF
+2025-11-24T12:55:55.65315-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.6530157-03:00 [client] [INFO] Plan de PUT recibido: file=graninquisidor block_size=1024 blocks=26
+2025-11-24T12:55:55.6531557-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.6530413-03:00 [client] [DEBUG] Subiendo bloque 0 (graninquisidor_block_1) rango=[0:1024] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:55:55.6531583-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.6530551-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_1 a datanode localhost:4001 (size=1024)
+2025-11-24T12:55:55.6533757-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6532878-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56519
+2025-11-24T12:55:55.653381-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6533141-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56519
+2025-11-24T12:55:55.6534176-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6533258-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56519: "WRITE graninquisidor_block_1 1024"
+2025-11-24T12:55:55.6534218-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6533518-03:00 [datanode-4001] [INFO] WRITE bloque=graninquisidor_block_1 size=1024 desde 127.0.0.1:56519
+2025-11-24T12:55:55.6538484-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6537742-03:00 [datanode-4001] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_1 path=data/graninquisidor_block_1 size=1024
+2025-11-24T12:55:55.6538543-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6538022-03:00 [datanode-4001] [INFO] WRITE OK bloque=graninquisidor_block_1 desde 127.0.0.1:56519
+2025-11-24T12:55:55.6539064-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.6538704-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_1 a datanode localhost:4002 (size=1024)
+2025-11-24T12:55:55.6540065-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6539272-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56519
+2025-11-24T12:55:55.6543482-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.6542758-03:00 [datanode-4002] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56520
+2025-11-24T12:55:55.6543544-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.6543091-03:00 [datanode-4002] [DEBUG] handleConn iniciado para 127.0.0.1:56520
+2025-11-24T12:55:55.6543603-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.654323-03:00 [datanode-4002] [DEBUG] Datanode recibió de 127.0.0.1:56520: "WRITE graninquisidor_block_1 1024"
+2025-11-24T12:55:55.6543651-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.6543493-03:00 [datanode-4002] [INFO] WRITE bloque=graninquisidor_block_1 size=1024 desde 127.0.0.1:56520
+2025-11-24T12:55:55.660717-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.6606218-03:00 [datanode-4002] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_1 path=data/graninquisidor_block_1 size=1024
+2025-11-24T12:55:55.6607317-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.6606884-03:00 [datanode-4002] [INFO] WRITE OK bloque=graninquisidor_block_1 desde 127.0.0.1:56520
+2025-11-24T12:55:55.6608209-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.6607802-03:00 [datanode-4002] [DEBUG] Conexión cerrada desde 127.0.0.1:56520
+2025-11-24T12:55:55.661163-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.6610963-03:00 [client] [DEBUG] Subiendo bloque 1 (graninquisidor_block_2) rango=[1024:2048] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:55:55.6611736-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.66114-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_2 a datanode localhost:4001 (size=1024)
+2025-11-24T12:55:55.6613519-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6613071-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56521
+2025-11-24T12:55:55.6613613-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6613356-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56521
+2025-11-24T12:55:55.6613718-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6613515-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56521: "WRITE graninquisidor_block_2 1024"
+2025-11-24T12:55:55.6613902-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6613665-03:00 [datanode-4001] [INFO] WRITE bloque=graninquisidor_block_2 size=1024 desde 127.0.0.1:56521
+2025-11-24T12:55:55.6798746-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6798042-03:00 [datanode-4001] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_2 path=data/graninquisidor_block_2 size=1024
+2025-11-24T12:55:55.6798875-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6798449-03:00 [datanode-4001] [INFO] WRITE OK bloque=graninquisidor_block_2 desde 127.0.0.1:56521
+2025-11-24T12:55:55.6799705-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.6799259-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_2 a datanode localhost:4002 (size=1024)
+2025-11-24T12:55:55.6800896-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6799787-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56521
+2025-11-24T12:55:55.6805732-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.6804646-03:00 [datanode-4002] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56522
+2025-11-24T12:55:55.6805795-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.6805015-03:00 [datanode-4002] [DEBUG] handleConn iniciado para 127.0.0.1:56522
+2025-11-24T12:55:55.680582-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.680514-03:00 [datanode-4002] [DEBUG] Datanode recibió de 127.0.0.1:56522: "WRITE graninquisidor_block_2 1024"
+2025-11-24T12:55:55.6805845-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.680531-03:00 [datanode-4002] [INFO] WRITE bloque=graninquisidor_block_2 size=1024 desde 127.0.0.1:56522
+2025-11-24T12:55:55.6870195-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.6869483-03:00 [datanode-4002] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_2 path=data/graninquisidor_block_2 size=1024
+2025-11-24T12:55:55.6870303-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.6869931-03:00 [datanode-4002] [INFO] WRITE OK bloque=graninquisidor_block_2 desde 127.0.0.1:56522
+2025-11-24T12:55:55.6870866-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.6870478-03:00 [datanode-4002] [DEBUG] Conexión cerrada desde 127.0.0.1:56522
+2025-11-24T12:55:55.6871391-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.6870778-03:00 [client] [DEBUG] Subiendo bloque 2 (graninquisidor_block_3) rango=[2048:3072] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:55:55.6871457-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.6871055-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_3 a datanode localhost:4001 (size=1024)
+2025-11-24T12:55:55.6875891-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6874501-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56523
+2025-11-24T12:55:55.6875947-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6875211-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56523
+2025-11-24T12:55:55.6875973-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6875321-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56523: "WRITE graninquisidor_block_3 1024"
+2025-11-24T12:55:55.6876303-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6875474-03:00 [datanode-4001] [INFO] WRITE bloque=graninquisidor_block_3 size=1024 desde 127.0.0.1:56523
+2025-11-24T12:55:55.6881003-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6880252-03:00 [datanode-4001] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_3 path=data/graninquisidor_block_3 size=1024
+2025-11-24T12:55:55.6881082-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6880446-03:00 [datanode-4001] [INFO] WRITE OK bloque=graninquisidor_block_3 desde 127.0.0.1:56523
+2025-11-24T12:55:55.6881378-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.6880978-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_3 a datanode localhost:4002 (size=1024)
+2025-11-24T12:55:55.6882501-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6881603-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56523
+2025-11-24T12:55:55.6885203-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.6884148-03:00 [datanode-4002] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56524
+2025-11-24T12:55:55.6885269-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.6884396-03:00 [datanode-4002] [DEBUG] handleConn iniciado para 127.0.0.1:56524
+2025-11-24T12:55:55.6885294-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.6884565-03:00 [datanode-4002] [DEBUG] Datanode recibió de 127.0.0.1:56524: "WRITE graninquisidor_block_3 1024"
+2025-11-24T12:55:55.6885362-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.6884779-03:00 [datanode-4002] [INFO] WRITE bloque=graninquisidor_block_3 size=1024 desde 127.0.0.1:56524
+2025-11-24T12:55:55.6950186-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.6949576-03:00 [datanode-4002] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_3 path=data/graninquisidor_block_3 size=1024
+2025-11-24T12:55:55.6950317-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.6949899-03:00 [datanode-4002] [INFO] WRITE OK bloque=graninquisidor_block_3 desde 127.0.0.1:56524
+2025-11-24T12:55:55.695087-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.695053-03:00 [datanode-4002] [DEBUG] Conexión cerrada desde 127.0.0.1:56524
+2025-11-24T12:55:55.6952168-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.6950495-03:00 [client] [DEBUG] Subiendo bloque 3 (graninquisidor_block_4) rango=[3072:4096] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:55:55.6952381-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.6951422-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_4 a datanode localhost:4001 (size=1024)
+2025-11-24T12:55:55.6954937-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6954246-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56525
+2025-11-24T12:55:55.6955038-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6954523-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56525
+2025-11-24T12:55:55.6955067-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6954657-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56525: "WRITE graninquisidor_block_4 1024"
+2025-11-24T12:55:55.6955134-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6954789-03:00 [datanode-4001] [INFO] WRITE bloque=graninquisidor_block_4 size=1024 desde 127.0.0.1:56525
+2025-11-24T12:55:55.6960599-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6960175-03:00 [datanode-4001] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_4 path=data/graninquisidor_block_4 size=1024
+2025-11-24T12:55:55.6960679-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6960398-03:00 [datanode-4001] [INFO] WRITE OK bloque=graninquisidor_block_4 desde 127.0.0.1:56525
+2025-11-24T12:55:55.6961759-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.696128-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_4 a datanode localhost:4002 (size=1024)
+2025-11-24T12:55:55.6961992-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.6961561-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56525
+2025-11-24T12:55:55.6965134-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.696444-03:00 [datanode-4002] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56526
+2025-11-24T12:55:55.6965203-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.6964699-03:00 [datanode-4002] [DEBUG] handleConn iniciado para 127.0.0.1:56526
+2025-11-24T12:55:55.6965256-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.6964844-03:00 [datanode-4002] [DEBUG] Datanode recibió de 127.0.0.1:56526: "WRITE graninquisidor_block_4 1024"
+2025-11-24T12:55:55.6965296-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.6964959-03:00 [datanode-4002] [INFO] WRITE bloque=graninquisidor_block_4 size=1024 desde 127.0.0.1:56526
+2025-11-24T12:55:55.7031059-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7030375-03:00 [datanode-4002] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_4 path=data/graninquisidor_block_4 size=1024
+2025-11-24T12:55:55.7031201-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7030779-03:00 [datanode-4002] [INFO] WRITE OK bloque=graninquisidor_block_4 desde 127.0.0.1:56526
+2025-11-24T12:55:55.703215-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7031383-03:00 [datanode-4002] [DEBUG] Conexión cerrada desde 127.0.0.1:56526
+2025-11-24T12:55:55.703215-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7031636-03:00 [client] [DEBUG] Subiendo bloque 4 (graninquisidor_block_5) rango=[4096:5120] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:55:55.703222-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7031919-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_5 a datanode localhost:4001 (size=1024)
+2025-11-24T12:55:55.7035769-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7034692-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56527
+2025-11-24T12:55:55.7035838-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7035025-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56527
+2025-11-24T12:55:55.7035892-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7035153-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56527: "WRITE graninquisidor_block_5 1024"
+2025-11-24T12:55:55.7035934-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7035254-03:00 [datanode-4001] [INFO] WRITE bloque=graninquisidor_block_5 size=1024 desde 127.0.0.1:56527
+2025-11-24T12:55:55.7040341-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7039986-03:00 [datanode-4001] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_5 path=data/graninquisidor_block_5 size=1024
+2025-11-24T12:55:55.7040462-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7040202-03:00 [datanode-4001] [INFO] WRITE OK bloque=graninquisidor_block_5 desde 127.0.0.1:56527
+2025-11-24T12:55:55.7041254-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.704086-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_5 a datanode localhost:4002 (size=1024)
+2025-11-24T12:55:55.7044433-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7043695-03:00 [datanode-4002] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56528
+2025-11-24T12:55:55.7044492-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7043956-03:00 [datanode-4002] [DEBUG] handleConn iniciado para 127.0.0.1:56528
+2025-11-24T12:55:55.7044519-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.704408-03:00 [datanode-4002] [DEBUG] Datanode recibió de 127.0.0.1:56528: "WRITE graninquisidor_block_5 1024"
+2025-11-24T12:55:55.7044541-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7044189-03:00 [datanode-4002] [INFO] WRITE bloque=graninquisidor_block_5 size=1024 desde 127.0.0.1:56528
+2025-11-24T12:55:55.7069191-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7052528-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56527
+2025-11-24T12:55:55.7110777-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7109705-03:00 [datanode-4002] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_5 path=data/graninquisidor_block_5 size=1024
+2025-11-24T12:55:55.7110908-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.711001-03:00 [datanode-4002] [INFO] WRITE OK bloque=graninquisidor_block_5 desde 127.0.0.1:56528
+2025-11-24T12:55:55.7111453-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7111048-03:00 [datanode-4002] [DEBUG] Conexión cerrada desde 127.0.0.1:56528
+2025-11-24T12:55:55.71123-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7111487-03:00 [client] [DEBUG] Subiendo bloque 5 (graninquisidor_block_6) rango=[5120:6144] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:55:55.7112361-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7111891-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_6 a datanode localhost:4001 (size=1024)
+2025-11-24T12:55:55.7115901-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7115239-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56529
+2025-11-24T12:55:55.7115981-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7115545-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56529
+2025-11-24T12:55:55.711602-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7115672-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56529: "WRITE graninquisidor_block_6 1024"
+2025-11-24T12:55:55.7116137-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7115805-03:00 [datanode-4001] [INFO] WRITE bloque=graninquisidor_block_6 size=1024 desde 127.0.0.1:56529
+2025-11-24T12:55:55.7122648-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.712224-03:00 [datanode-4001] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_6 path=data/graninquisidor_block_6 size=1024
+2025-11-24T12:55:55.7122737-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7122421-03:00 [datanode-4001] [INFO] WRITE OK bloque=graninquisidor_block_6 desde 127.0.0.1:56529
+2025-11-24T12:55:55.7123232-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7122829-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_6 a datanode localhost:4002 (size=1024)
+2025-11-24T12:55:55.7123455-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7123036-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56529
+2025-11-24T12:55:55.7126701-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7126043-03:00 [datanode-4002] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56530
+2025-11-24T12:55:55.7126758-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7126323-03:00 [datanode-4002] [DEBUG] handleConn iniciado para 127.0.0.1:56530
+2025-11-24T12:55:55.7126784-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7126493-03:00 [datanode-4002] [DEBUG] Datanode recibió de 127.0.0.1:56530: "WRITE graninquisidor_block_6 1024"
+2025-11-24T12:55:55.7127103-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7126673-03:00 [datanode-4002] [INFO] WRITE bloque=graninquisidor_block_6 size=1024 desde 127.0.0.1:56530
+2025-11-24T12:55:55.7191209-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7190671-03:00 [datanode-4002] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_6 path=data/graninquisidor_block_6 size=1024
+2025-11-24T12:55:55.7191382-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7191017-03:00 [datanode-4002] [INFO] WRITE OK bloque=graninquisidor_block_6 desde 127.0.0.1:56530
+2025-11-24T12:55:55.7192779-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7191703-03:00 [datanode-4002] [DEBUG] Conexión cerrada desde 127.0.0.1:56530
+2025-11-24T12:55:55.7193476-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7192904-03:00 [client] [DEBUG] Subiendo bloque 6 (graninquisidor_block_7) rango=[6144:7168] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:55:55.719353-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7193142-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_7 a datanode localhost:4001 (size=1024)
+2025-11-24T12:55:55.7196302-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7195617-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56531
+2025-11-24T12:55:55.7196368-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7195937-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56531
+2025-11-24T12:55:55.7196393-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7196059-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56531: "WRITE graninquisidor_block_7 1024"
+2025-11-24T12:55:55.7196416-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7196149-03:00 [datanode-4001] [INFO] WRITE bloque=graninquisidor_block_7 size=1024 desde 127.0.0.1:56531
+2025-11-24T12:55:55.7200591-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7200244-03:00 [datanode-4001] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_7 path=data/graninquisidor_block_7 size=1024
+2025-11-24T12:55:55.7200683-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7200437-03:00 [datanode-4001] [INFO] WRITE OK bloque=graninquisidor_block_7 desde 127.0.0.1:56531
+2025-11-24T12:55:55.7201606-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7201262-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56531
+2025-11-24T12:55:55.7201929-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7201642-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_7 a datanode localhost:4002 (size=1024)
+2025-11-24T12:55:55.7205283-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7204443-03:00 [datanode-4002] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56532
+2025-11-24T12:55:55.7205359-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7204904-03:00 [datanode-4002] [DEBUG] handleConn iniciado para 127.0.0.1:56532
+2025-11-24T12:55:55.7205384-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7205042-03:00 [datanode-4002] [DEBUG] Datanode recibió de 127.0.0.1:56532: "WRITE graninquisidor_block_7 1024"
+2025-11-24T12:55:55.720603-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7205217-03:00 [datanode-4002] [INFO] WRITE bloque=graninquisidor_block_7 size=1024 desde 127.0.0.1:56532
+2025-11-24T12:55:55.7266619-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7265683-03:00 [datanode-4002] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_7 path=data/graninquisidor_block_7 size=1024
+2025-11-24T12:55:55.7266761-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7266125-03:00 [datanode-4002] [INFO] WRITE OK bloque=graninquisidor_block_7 desde 127.0.0.1:56532
+2025-11-24T12:55:55.7267796-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7267405-03:00 [datanode-4002] [DEBUG] Conexión cerrada desde 127.0.0.1:56532
+2025-11-24T12:55:55.72693-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7268718-03:00 [client] [DEBUG] Subiendo bloque 7 (graninquisidor_block_8) rango=[7168:8192] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:55:55.7270386-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7269136-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_8 a datanode localhost:4001 (size=1024)
+2025-11-24T12:55:55.7273022-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7272338-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56533
+2025-11-24T12:55:55.7273084-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7272607-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56533
+2025-11-24T12:55:55.7273113-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7272743-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56533: "WRITE graninquisidor_block_8 1024"
+2025-11-24T12:55:55.7273166-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7272868-03:00 [datanode-4001] [INFO] WRITE bloque=graninquisidor_block_8 size=1024 desde 127.0.0.1:56533
+2025-11-24T12:55:55.7277826-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7277371-03:00 [datanode-4001] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_8 path=data/graninquisidor_block_8 size=1024
+2025-11-24T12:55:55.7277912-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7277614-03:00 [datanode-4001] [INFO] WRITE OK bloque=graninquisidor_block_8 desde 127.0.0.1:56533
+2025-11-24T12:55:55.7278698-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7278249-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_8 a datanode localhost:4002 (size=1024)
+2025-11-24T12:55:55.7279496-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7278853-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56533
+2025-11-24T12:55:55.7282638-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.728186-03:00 [datanode-4002] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56534
+2025-11-24T12:55:55.7282696-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7282123-03:00 [datanode-4002] [DEBUG] handleConn iniciado para 127.0.0.1:56534
+2025-11-24T12:55:55.7282723-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7282247-03:00 [datanode-4002] [DEBUG] Datanode recibió de 127.0.0.1:56534: "WRITE graninquisidor_block_8 1024"
+2025-11-24T12:55:55.7282746-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7282356-03:00 [datanode-4002] [INFO] WRITE bloque=graninquisidor_block_8 size=1024 desde 127.0.0.1:56534
+2025-11-24T12:55:55.7347736-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7347234-03:00 [datanode-4002] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_8 path=data/graninquisidor_block_8 size=1024
+2025-11-24T12:55:55.7347844-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7347441-03:00 [datanode-4002] [INFO] WRITE OK bloque=graninquisidor_block_8 desde 127.0.0.1:56534
+2025-11-24T12:55:55.7348494-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7348087-03:00 [client] [DEBUG] Subiendo bloque 8 (graninquisidor_block_9) rango=[8192:9216] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:55:55.7348586-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7348319-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_9 a datanode localhost:4001 (size=1024)
+2025-11-24T12:55:55.7353413-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7352297-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56535
+2025-11-24T12:55:55.7353476-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7352559-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56535
+2025-11-24T12:55:55.7353502-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7352672-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56535: "WRITE graninquisidor_block_9 1024"
+2025-11-24T12:55:55.7353524-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7352774-03:00 [datanode-4001] [INFO] WRITE bloque=graninquisidor_block_9 size=1024 desde 127.0.0.1:56535
+2025-11-24T12:55:55.7357818-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7357214-03:00 [datanode-4001] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_9 path=data/graninquisidor_block_9 size=1024
+2025-11-24T12:55:55.7357887-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7357361-03:00 [datanode-4001] [INFO] WRITE OK bloque=graninquisidor_block_9 desde 127.0.0.1:56535
+2025-11-24T12:55:55.7359086-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7358224-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_9 a datanode localhost:4002 (size=1024)
+2025-11-24T12:55:55.7359412-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7358617-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56535
+2025-11-24T12:55:55.7359598-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7350575-03:00 [datanode-4002] [DEBUG] Conexión cerrada desde 127.0.0.1:56534
+2025-11-24T12:55:55.7361853-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7361521-03:00 [datanode-4002] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56536
+2025-11-24T12:55:55.7362451-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7361728-03:00 [datanode-4002] [DEBUG] handleConn iniciado para 127.0.0.1:56536
+2025-11-24T12:55:55.7362513-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7361956-03:00 [datanode-4002] [DEBUG] Datanode recibió de 127.0.0.1:56536: "WRITE graninquisidor_block_9 1024"
+2025-11-24T12:55:55.7362543-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7362087-03:00 [datanode-4002] [INFO] WRITE bloque=graninquisidor_block_9 size=1024 desde 127.0.0.1:56536
+2025-11-24T12:55:55.742753-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7426882-03:00 [datanode-4002] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_9 path=data/graninquisidor_block_9 size=1024
+2025-11-24T12:55:55.742772-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7427266-03:00 [datanode-4002] [INFO] WRITE OK bloque=graninquisidor_block_9 desde 127.0.0.1:56536
+2025-11-24T12:55:55.7428416-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7427987-03:00 [datanode-4002] [DEBUG] Conexión cerrada desde 127.0.0.1:56536
+2025-11-24T12:55:55.7429007-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.742824-03:00 [client] [DEBUG] Subiendo bloque 9 (graninquisidor_block_10) rango=[9216:10240] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:55:55.7429169-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7428569-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_10 a datanode localhost:4001 (size=1024)
+2025-11-24T12:55:55.743357-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.743296-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56537
+2025-11-24T12:55:55.74337-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7433411-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56537
+2025-11-24T12:55:55.7433783-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.743358-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56537: "WRITE graninquisidor_block_10 1024"
+2025-11-24T12:55:55.743422-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7433728-03:00 [datanode-4001] [INFO] WRITE bloque=graninquisidor_block_10 size=1024 desde 127.0.0.1:56537
+2025-11-24T12:55:55.744153-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7441093-03:00 [datanode-4001] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_10 path=data/graninquisidor_block_10 size=1024
+2025-11-24T12:55:55.744161-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7441268-03:00 [datanode-4001] [INFO] WRITE OK bloque=graninquisidor_block_10 desde 127.0.0.1:56537
+2025-11-24T12:55:55.7443511-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7443193-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56537
+2025-11-24T12:55:55.7445253-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7443952-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_10 a datanode localhost:4002 (size=1024)
+2025-11-24T12:55:55.7447794-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7446584-03:00 [datanode-4002] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56538
+2025-11-24T12:55:55.7447851-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7446841-03:00 [datanode-4002] [DEBUG] handleConn iniciado para 127.0.0.1:56538
+2025-11-24T12:55:55.7447877-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7446963-03:00 [datanode-4002] [DEBUG] Datanode recibió de 127.0.0.1:56538: "WRITE graninquisidor_block_10 1024"
+2025-11-24T12:55:55.74479-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7447068-03:00 [datanode-4002] [INFO] WRITE bloque=graninquisidor_block_10 size=1024 desde 127.0.0.1:56538
+2025-11-24T12:55:55.7509264-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7508715-03:00 [datanode-4002] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_10 path=data/graninquisidor_block_10 size=1024
+2025-11-24T12:55:55.7509399-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7508978-03:00 [datanode-4002] [INFO] WRITE OK bloque=graninquisidor_block_10 desde 127.0.0.1:56538
+2025-11-24T12:55:55.7509895-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.750955-03:00 [datanode-4002] [DEBUG] Conexión cerrada desde 127.0.0.1:56538
+2025-11-24T12:55:55.7512194-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7511137-03:00 [client] [DEBUG] Subiendo bloque 10 (graninquisidor_block_11) rango=[10240:11264] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:55:55.7512261-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7511435-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_11 a datanode localhost:4001 (size=1024)
+2025-11-24T12:55:55.7516646-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7515158-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56539
+2025-11-24T12:55:55.7516712-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7515522-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56539
+2025-11-24T12:55:55.7516737-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7515661-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56539: "WRITE graninquisidor_block_11 1024"
+2025-11-24T12:55:55.7516761-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7515874-03:00 [datanode-4001] [INFO] WRITE bloque=graninquisidor_block_11 size=1024 desde 127.0.0.1:56539
+2025-11-24T12:55:55.7520132-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7519834-03:00 [datanode-4001] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_11 path=data/graninquisidor_block_11 size=1024
+2025-11-24T12:55:55.7520263-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7519998-03:00 [datanode-4001] [INFO] WRITE OK bloque=graninquisidor_block_11 desde 127.0.0.1:56539
+2025-11-24T12:55:55.7521134-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7520665-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_11 a datanode localhost:4002 (size=1024)
+2025-11-24T12:55:55.7522895-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7521915-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56539
+2025-11-24T12:55:55.7525118-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.752475-03:00 [datanode-4002] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56540
+2025-11-24T12:55:55.7525209-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7525004-03:00 [datanode-4002] [DEBUG] handleConn iniciado para 127.0.0.1:56540
+2025-11-24T12:55:55.7525512-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7525159-03:00 [datanode-4002] [DEBUG] Datanode recibió de 127.0.0.1:56540: "WRITE graninquisidor_block_11 1024"
+2025-11-24T12:55:55.752595-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.752533-03:00 [datanode-4002] [INFO] WRITE bloque=graninquisidor_block_11 size=1024 desde 127.0.0.1:56540
+2025-11-24T12:55:55.7581539-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7580939-03:00 [datanode-4002] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_11 path=data/graninquisidor_block_11 size=1024
+2025-11-24T12:55:55.7582039-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7581295-03:00 [datanode-4002] [INFO] WRITE OK bloque=graninquisidor_block_11 desde 127.0.0.1:56540
+2025-11-24T12:55:55.7582329-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7581806-03:00 [client] [DEBUG] Subiendo bloque 11 (graninquisidor_block_12) rango=[11264:12288] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:55:55.7582433-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.758215-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_12 a datanode localhost:4001 (size=1024)
+2025-11-24T12:55:55.7582722-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7582028-03:00 [datanode-4002] [DEBUG] Conexión cerrada desde 127.0.0.1:56540
+2025-11-24T12:55:55.75861-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7585725-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56541
+2025-11-24T12:55:55.7586211-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7585995-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56541
+2025-11-24T12:55:55.7586789-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.758617-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56541: "WRITE graninquisidor_block_12 1024"
+2025-11-24T12:55:55.7586929-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7586317-03:00 [datanode-4001] [INFO] WRITE bloque=graninquisidor_block_12 size=1024 desde 127.0.0.1:56541
+2025-11-24T12:55:55.7590922-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7590285-03:00 [datanode-4001] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_12 path=data/graninquisidor_block_12 size=1024
+2025-11-24T12:55:55.7591217-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7590555-03:00 [datanode-4001] [INFO] WRITE OK bloque=graninquisidor_block_12 desde 127.0.0.1:56541
+2025-11-24T12:55:55.7591379-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.759095-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_12 a datanode localhost:4002 (size=1024)
+2025-11-24T12:55:55.7591973-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7591557-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56541
+2025-11-24T12:55:55.7595389-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7594755-03:00 [datanode-4002] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56542
+2025-11-24T12:55:55.759545-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7594997-03:00 [datanode-4002] [DEBUG] handleConn iniciado para 127.0.0.1:56542
+2025-11-24T12:55:55.7595474-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7595115-03:00 [datanode-4002] [DEBUG] Datanode recibió de 127.0.0.1:56542: "WRITE graninquisidor_block_12 1024"
+2025-11-24T12:55:55.7595497-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7595222-03:00 [datanode-4002] [INFO] WRITE bloque=graninquisidor_block_12 size=1024 desde 127.0.0.1:56542
+2025-11-24T12:55:55.767538-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7674385-03:00 [datanode-4002] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_12 path=data/graninquisidor_block_12 size=1024
+2025-11-24T12:55:55.7675728-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7675011-03:00 [datanode-4002] [INFO] WRITE OK bloque=graninquisidor_block_12 desde 127.0.0.1:56542
+2025-11-24T12:55:55.7676307-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7675819-03:00 [client] [DEBUG] Subiendo bloque 12 (graninquisidor_block_13) rango=[12288:13312] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:55:55.7676644-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7676217-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_13 a datanode localhost:4001 (size=1024)
+2025-11-24T12:55:55.7680965-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7680451-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56543
+2025-11-24T12:55:55.7681276-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7680828-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56543
+2025-11-24T12:55:55.7681376-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7681024-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56543: "WRITE graninquisidor_block_13 1024"
+2025-11-24T12:55:55.7681442-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7681233-03:00 [datanode-4001] [INFO] WRITE bloque=graninquisidor_block_13 size=1024 desde 127.0.0.1:56543
+2025-11-24T12:55:55.7688711-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7688266-03:00 [datanode-4001] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_13 path=data/graninquisidor_block_13 size=1024
+2025-11-24T12:55:55.7688876-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7688585-03:00 [datanode-4001] [INFO] WRITE OK bloque=graninquisidor_block_13 desde 127.0.0.1:56543
+2025-11-24T12:55:55.7689669-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7689252-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56543
+2025-11-24T12:55:55.7689874-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7689083-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_13 a datanode localhost:4002 (size=1024)
+2025-11-24T12:55:55.7693091-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7684654-03:00 [datanode-4002] [DEBUG] Conexión cerrada desde 127.0.0.1:56542
+2025-11-24T12:55:55.7694182-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.769377-03:00 [datanode-4002] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56544
+2025-11-24T12:55:55.769427-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7694045-03:00 [datanode-4002] [DEBUG] handleConn iniciado para 127.0.0.1:56544
+2025-11-24T12:55:55.7694613-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7694221-03:00 [datanode-4002] [DEBUG] Datanode recibió de 127.0.0.1:56544: "WRITE graninquisidor_block_13 1024"
+2025-11-24T12:55:55.7694651-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7694378-03:00 [datanode-4002] [INFO] WRITE bloque=graninquisidor_block_13 size=1024 desde 127.0.0.1:56544
+2025-11-24T12:55:55.7770417-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7769785-03:00 [datanode-4002] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_13 path=data/graninquisidor_block_13 size=1024
+2025-11-24T12:55:55.7770618-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7770099-03:00 [datanode-4002] [INFO] WRITE OK bloque=graninquisidor_block_13 desde 127.0.0.1:56544
+2025-11-24T12:55:55.7771843-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7770799-03:00 [datanode-4002] [DEBUG] Conexión cerrada desde 127.0.0.1:56544
+2025-11-24T12:55:55.777217-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7771813-03:00 [client] [DEBUG] Subiendo bloque 13 (graninquisidor_block_14) rango=[13312:14336] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:55:55.777308-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7772111-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_14 a datanode localhost:4001 (size=1024)
+2025-11-24T12:55:55.7775636-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.777525-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56545
+2025-11-24T12:55:55.7775731-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7775525-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56545
+2025-11-24T12:55:55.7775912-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7775654-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56545: "WRITE graninquisidor_block_14 1024"
+2025-11-24T12:55:55.7775979-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7775788-03:00 [datanode-4001] [INFO] WRITE bloque=graninquisidor_block_14 size=1024 desde 127.0.0.1:56545
+2025-11-24T12:55:55.7788867-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7788475-03:00 [datanode-4001] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_14 path=data/graninquisidor_block_14 size=1024
+2025-11-24T12:55:55.778909-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7788643-03:00 [datanode-4001] [INFO] WRITE OK bloque=graninquisidor_block_14 desde 127.0.0.1:56545
+2025-11-24T12:55:55.7789476-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7789081-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_14 a datanode localhost:4002 (size=1024)
+2025-11-24T12:55:55.7790528-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.778955-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56545
+2025-11-24T12:55:55.7792798-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7792161-03:00 [datanode-4002] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56546
+2025-11-24T12:55:55.7792839-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7792375-03:00 [datanode-4002] [DEBUG] handleConn iniciado para 127.0.0.1:56546
+2025-11-24T12:55:55.7792865-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7792494-03:00 [datanode-4002] [DEBUG] Datanode recibió de 127.0.0.1:56546: "WRITE graninquisidor_block_14 1024"
+2025-11-24T12:55:55.7793398-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7792605-03:00 [datanode-4002] [INFO] WRITE bloque=graninquisidor_block_14 size=1024 desde 127.0.0.1:56546
+2025-11-24T12:55:55.7858974-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7858413-03:00 [datanode-4002] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_14 path=data/graninquisidor_block_14 size=1024
+2025-11-24T12:55:55.7859075-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7858736-03:00 [datanode-4002] [INFO] WRITE OK bloque=graninquisidor_block_14 desde 127.0.0.1:56546
+2025-11-24T12:55:55.7860342-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7859913-03:00 [datanode-4002] [DEBUG] Conexión cerrada desde 127.0.0.1:56546
+2025-11-24T12:55:55.7860977-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7860071-03:00 [client] [DEBUG] Subiendo bloque 14 (graninquisidor_block_15) rango=[14336:15360] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:55:55.7861032-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7860475-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_15 a datanode localhost:4001 (size=1024)
+2025-11-24T12:55:55.7864171-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7863806-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56547
+2025-11-24T12:55:55.7864291-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7864067-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56547
+2025-11-24T12:55:55.7864424-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.786421-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56547: "WRITE graninquisidor_block_15 1024"
+2025-11-24T12:55:55.7864833-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7864379-03:00 [datanode-4001] [INFO] WRITE bloque=graninquisidor_block_15 size=1024 desde 127.0.0.1:56547
+2025-11-24T12:55:55.7869676-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7868807-03:00 [datanode-4001] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_15 path=data/graninquisidor_block_15 size=1024
+2025-11-24T12:55:55.7869842-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7869109-03:00 [datanode-4001] [INFO] WRITE OK bloque=graninquisidor_block_15 desde 127.0.0.1:56547
+2025-11-24T12:55:55.7870879-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7870435-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_15 a datanode localhost:4002 (size=1024)
+2025-11-24T12:55:55.7871251-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7870958-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56547
+2025-11-24T12:55:55.7874538-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7873514-03:00 [datanode-4002] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56548
+2025-11-24T12:55:55.7874599-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7873787-03:00 [datanode-4002] [DEBUG] handleConn iniciado para 127.0.0.1:56548
+2025-11-24T12:55:55.7874625-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7873913-03:00 [datanode-4002] [DEBUG] Datanode recibió de 127.0.0.1:56548: "WRITE graninquisidor_block_15 1024"
+2025-11-24T12:55:55.7874649-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7874018-03:00 [datanode-4002] [INFO] WRITE bloque=graninquisidor_block_15 size=1024 desde 127.0.0.1:56548
+2025-11-24T12:55:55.7934171-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7933682-03:00 [datanode-4002] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_15 path=data/graninquisidor_block_15 size=1024
+2025-11-24T12:55:55.7934725-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7933891-03:00 [datanode-4002] [INFO] WRITE OK bloque=graninquisidor_block_15 desde 127.0.0.1:56548
+2025-11-24T12:55:55.7935206-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7934527-03:00 [client] [DEBUG] Subiendo bloque 15 (graninquisidor_block_16) rango=[15360:16384] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:55:55.7935285-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.793483-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_16 a datanode localhost:4001 (size=1024)
+2025-11-24T12:55:55.7935658-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.793465-03:00 [datanode-4002] [DEBUG] Conexión cerrada desde 127.0.0.1:56548
+2025-11-24T12:55:55.7940251-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7939069-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56549
+2025-11-24T12:55:55.794032-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7939419-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56549
+2025-11-24T12:55:55.7940374-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7939573-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56549: "WRITE graninquisidor_block_16 1024"
+2025-11-24T12:55:55.7940494-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7939827-03:00 [datanode-4001] [INFO] WRITE bloque=graninquisidor_block_16 size=1024 desde 127.0.0.1:56549
+2025-11-24T12:55:55.7944248-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7943751-03:00 [datanode-4001] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_16 path=data/graninquisidor_block_16 size=1024
+2025-11-24T12:55:55.7944314-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7944008-03:00 [datanode-4001] [INFO] WRITE OK bloque=graninquisidor_block_16 desde 127.0.0.1:56549
+2025-11-24T12:55:55.7945108-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.7944496-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_16 a datanode localhost:4002 (size=1024)
+2025-11-24T12:55:55.7945358-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.7944684-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56549
+2025-11-24T12:55:55.7948581-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7947902-03:00 [datanode-4002] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56550
+2025-11-24T12:55:55.7948643-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7948167-03:00 [datanode-4002] [DEBUG] handleConn iniciado para 127.0.0.1:56550
+2025-11-24T12:55:55.794867-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7948297-03:00 [datanode-4002] [DEBUG] Datanode recibió de 127.0.0.1:56550: "WRITE graninquisidor_block_16 1024"
+2025-11-24T12:55:55.7948694-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.7948415-03:00 [datanode-4002] [INFO] WRITE bloque=graninquisidor_block_16 size=1024 desde 127.0.0.1:56550
+2025-11-24T12:55:55.8013546-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8012927-03:00 [datanode-4002] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_16 path=data/graninquisidor_block_16 size=1024
+2025-11-24T12:55:55.8013782-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8013265-03:00 [datanode-4002] [INFO] WRITE OK bloque=graninquisidor_block_16 desde 127.0.0.1:56550
+2025-11-24T12:55:55.8014676-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8014177-03:00 [client] [DEBUG] Subiendo bloque 16 (graninquisidor_block_17) rango=[16384:17408] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:55:55.8014777-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8014457-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_17 a datanode localhost:4001 (size=1024)
+2025-11-24T12:55:55.8015171-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8014362-03:00 [datanode-4002] [DEBUG] Conexión cerrada desde 127.0.0.1:56550
+2025-11-24T12:55:55.8019103-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8018387-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56551
+2025-11-24T12:55:55.8019153-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8018648-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56551
+2025-11-24T12:55:55.8019182-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8018762-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56551: "WRITE graninquisidor_block_17 1024"
+2025-11-24T12:55:55.8019204-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8018866-03:00 [datanode-4001] [INFO] WRITE bloque=graninquisidor_block_17 size=1024 desde 127.0.0.1:56551
+2025-11-24T12:55:55.802359-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8023052-03:00 [datanode-4001] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_17 path=data/graninquisidor_block_17 size=1024
+2025-11-24T12:55:55.802383-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8023284-03:00 [datanode-4001] [INFO] WRITE OK bloque=graninquisidor_block_17 desde 127.0.0.1:56551
+2025-11-24T12:55:55.8024573-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8023899-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_17 a datanode localhost:4002 (size=1024)
+2025-11-24T12:55:55.8024588-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8024115-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56551
+2025-11-24T12:55:55.8027084-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8026318-03:00 [datanode-4002] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56552
+2025-11-24T12:55:55.8027168-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8026615-03:00 [datanode-4002] [DEBUG] handleConn iniciado para 127.0.0.1:56552
+2025-11-24T12:55:55.8027195-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.802675-03:00 [datanode-4002] [DEBUG] Datanode recibió de 127.0.0.1:56552: "WRITE graninquisidor_block_17 1024"
+2025-11-24T12:55:55.8027217-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8026861-03:00 [datanode-4002] [INFO] WRITE bloque=graninquisidor_block_17 size=1024 desde 127.0.0.1:56552
+2025-11-24T12:55:55.8088958-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8088476-03:00 [datanode-4002] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_17 path=data/graninquisidor_block_17 size=1024
+2025-11-24T12:55:55.8089075-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8088671-03:00 [datanode-4002] [INFO] WRITE OK bloque=graninquisidor_block_17 desde 127.0.0.1:56552
+2025-11-24T12:55:55.8090171-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8089582-03:00 [datanode-4002] [DEBUG] Conexión cerrada desde 127.0.0.1:56552
+2025-11-24T12:55:55.8091428-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8090956-03:00 [client] [DEBUG] Subiendo bloque 17 (graninquisidor_block_18) rango=[17408:18432] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:55:55.809155-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8091287-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_18 a datanode localhost:4001 (size=1024)
+2025-11-24T12:55:55.8093224-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8092835-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56553
+2025-11-24T12:55:55.8093468-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8093132-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56553
+2025-11-24T12:55:55.80935-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8093295-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56553: "WRITE graninquisidor_block_18 1024"
+2025-11-24T12:55:55.8094167-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8093429-03:00 [datanode-4001] [INFO] WRITE bloque=graninquisidor_block_18 size=1024 desde 127.0.0.1:56553
+2025-11-24T12:55:55.8130562-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8129718-03:00 [datanode-4001] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_18 path=data/graninquisidor_block_18 size=1024
+2025-11-24T12:55:55.8130745-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8130044-03:00 [datanode-4001] [INFO] WRITE OK bloque=graninquisidor_block_18 desde 127.0.0.1:56553
+2025-11-24T12:55:55.8130915-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8130589-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56553
+2025-11-24T12:55:55.813118-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8130813-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_18 a datanode localhost:4002 (size=1024)
+2025-11-24T12:55:55.8134143-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8133684-03:00 [datanode-4002] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56554
+2025-11-24T12:55:55.8134572-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8133984-03:00 [datanode-4002] [DEBUG] handleConn iniciado para 127.0.0.1:56554
+2025-11-24T12:55:55.8134632-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8134207-03:00 [datanode-4002] [DEBUG] Datanode recibió de 127.0.0.1:56554: "WRITE graninquisidor_block_18 1024"
+2025-11-24T12:55:55.8135101-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8134391-03:00 [datanode-4002] [INFO] WRITE bloque=graninquisidor_block_18 size=1024 desde 127.0.0.1:56554
+2025-11-24T12:55:55.8199607-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8198914-03:00 [datanode-4002] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_18 path=data/graninquisidor_block_18 size=1024
+2025-11-24T12:55:55.8199706-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8199112-03:00 [datanode-4002] [INFO] WRITE OK bloque=graninquisidor_block_18 desde 127.0.0.1:56554
+2025-11-24T12:55:55.8200621-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8200313-03:00 [datanode-4002] [DEBUG] Conexión cerrada desde 127.0.0.1:56554
+2025-11-24T12:55:55.8201641-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8200873-03:00 [client] [DEBUG] Subiendo bloque 18 (graninquisidor_block_19) rango=[18432:19456] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:55:55.8201694-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8201182-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_19 a datanode localhost:4001 (size=1024)
+2025-11-24T12:55:55.8204557-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.820353-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56555
+2025-11-24T12:55:55.8204693-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8203863-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56555
+2025-11-24T12:55:55.8204722-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8203995-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56555: "WRITE graninquisidor_block_19 1024"
+2025-11-24T12:55:55.8204745-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8204097-03:00 [datanode-4001] [INFO] WRITE bloque=graninquisidor_block_19 size=1024 desde 127.0.0.1:56555
+2025-11-24T12:55:55.8209079-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8208584-03:00 [datanode-4001] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_19 path=data/graninquisidor_block_19 size=1024
+2025-11-24T12:55:55.8209141-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8208815-03:00 [datanode-4001] [INFO] WRITE OK bloque=graninquisidor_block_19 desde 127.0.0.1:56555
+2025-11-24T12:55:55.821-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8209651-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56555
+2025-11-24T12:55:55.8211927-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8210858-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_19 a datanode localhost:4002 (size=1024)
+2025-11-24T12:55:55.8213337-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8212621-03:00 [datanode-4002] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56556
+2025-11-24T12:55:55.8213407-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8212854-03:00 [datanode-4002] [DEBUG] handleConn iniciado para 127.0.0.1:56556
+2025-11-24T12:55:55.8213433-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8212973-03:00 [datanode-4002] [DEBUG] Datanode recibió de 127.0.0.1:56556: "WRITE graninquisidor_block_19 1024"
+2025-11-24T12:55:55.8213455-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8213079-03:00 [datanode-4002] [INFO] WRITE bloque=graninquisidor_block_19 size=1024 desde 127.0.0.1:56556
+2025-11-24T12:55:55.8276038-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8274964-03:00 [datanode-4002] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_19 path=data/graninquisidor_block_19 size=1024
+2025-11-24T12:55:55.8276362-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8275166-03:00 [datanode-4002] [INFO] WRITE OK bloque=graninquisidor_block_19 desde 127.0.0.1:56556
+2025-11-24T12:55:55.8276997-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8276089-03:00 [client] [DEBUG] Subiendo bloque 19 (graninquisidor_block_20) rango=[19456:20480] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:55:55.8277088-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8276401-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_20 a datanode localhost:4001 (size=1024)
+2025-11-24T12:55:55.8277474-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8276612-03:00 [datanode-4002] [DEBUG] Conexión cerrada desde 127.0.0.1:56556
+2025-11-24T12:55:55.8281435-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8280391-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56557
+2025-11-24T12:55:55.8281495-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8280657-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56557
+2025-11-24T12:55:55.828152-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.828094-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56557: "WRITE graninquisidor_block_20 1024"
+2025-11-24T12:55:55.8281543-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8281073-03:00 [datanode-4001] [INFO] WRITE bloque=graninquisidor_block_20 size=1024 desde 127.0.0.1:56557
+2025-11-24T12:55:55.8285721-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8285386-03:00 [datanode-4001] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_20 path=data/graninquisidor_block_20 size=1024
+2025-11-24T12:55:55.8285857-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8285541-03:00 [datanode-4001] [INFO] WRITE OK bloque=graninquisidor_block_20 desde 127.0.0.1:56557
+2025-11-24T12:55:55.8286404-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8285962-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_20 a datanode localhost:4002 (size=1024)
+2025-11-24T12:55:55.82866-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8285965-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56557
+2025-11-24T12:55:55.8290139-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8289462-03:00 [datanode-4002] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56558
+2025-11-24T12:55:55.8290206-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8289751-03:00 [datanode-4002] [DEBUG] handleConn iniciado para 127.0.0.1:56558
+2025-11-24T12:55:55.8290233-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8289922-03:00 [datanode-4002] [DEBUG] Datanode recibió de 127.0.0.1:56558: "WRITE graninquisidor_block_20 1024"
+2025-11-24T12:55:55.8290316-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8290102-03:00 [datanode-4002] [INFO] WRITE bloque=graninquisidor_block_20 size=1024 desde 127.0.0.1:56558
+2025-11-24T12:55:55.835478-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.835419-03:00 [datanode-4002] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_20 path=data/graninquisidor_block_20 size=1024
+2025-11-24T12:55:55.8354894-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8354521-03:00 [datanode-4002] [INFO] WRITE OK bloque=graninquisidor_block_20 desde 127.0.0.1:56558
+2025-11-24T12:55:55.835595-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8355464-03:00 [client] [DEBUG] Subiendo bloque 20 (graninquisidor_block_21) rango=[20480:21504] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:55:55.8356024-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8355744-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_21 a datanode localhost:4001 (size=1024)
+2025-11-24T12:55:55.8356262-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.835563-03:00 [datanode-4002] [DEBUG] Conexión cerrada desde 127.0.0.1:56558
+2025-11-24T12:55:55.8360693-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8359716-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56559
+2025-11-24T12:55:55.8360753-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8359988-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56559
+2025-11-24T12:55:55.8360805-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8360132-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56559: "WRITE graninquisidor_block_21 1024"
+2025-11-24T12:55:55.8360846-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8360231-03:00 [datanode-4001] [INFO] WRITE bloque=graninquisidor_block_21 size=1024 desde 127.0.0.1:56559
+2025-11-24T12:55:55.8365007-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8364649-03:00 [datanode-4001] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_21 path=data/graninquisidor_block_21 size=1024
+2025-11-24T12:55:55.8365084-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8364811-03:00 [datanode-4001] [INFO] WRITE OK bloque=graninquisidor_block_21 desde 127.0.0.1:56559
+2025-11-24T12:55:55.8366402-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8365492-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56559
+2025-11-24T12:55:55.8368141-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8367287-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_21 a datanode localhost:4002 (size=1024)
+2025-11-24T12:55:55.8368524-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8368133-03:00 [datanode-4002] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56560
+2025-11-24T12:55:55.8368654-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8368398-03:00 [datanode-4002] [DEBUG] handleConn iniciado para 127.0.0.1:56560
+2025-11-24T12:55:55.8369551-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8368585-03:00 [datanode-4002] [DEBUG] Datanode recibió de 127.0.0.1:56560: "WRITE graninquisidor_block_21 1024"
+2025-11-24T12:55:55.8369593-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8368769-03:00 [datanode-4002] [INFO] WRITE bloque=graninquisidor_block_21 size=1024 desde 127.0.0.1:56560
+2025-11-24T12:55:55.8433448-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8432875-03:00 [datanode-4002] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_21 path=data/graninquisidor_block_21 size=1024
+2025-11-24T12:55:55.8433604-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8433148-03:00 [datanode-4002] [INFO] WRITE OK bloque=graninquisidor_block_21 desde 127.0.0.1:56560
+2025-11-24T12:55:55.8434612-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8434183-03:00 [client] [DEBUG] Subiendo bloque 21 (graninquisidor_block_22) rango=[21504:22528] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:55:55.8434746-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8434485-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_22 a datanode localhost:4001 (size=1024)
+2025-11-24T12:55:55.8435908-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8434579-03:00 [datanode-4002] [DEBUG] Conexión cerrada desde 127.0.0.1:56560
+2025-11-24T12:55:55.8439524-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8438995-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56561
+2025-11-24T12:55:55.8439631-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8439363-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56561
+2025-11-24T12:55:55.843971-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8439516-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56561: "WRITE graninquisidor_block_22 1024"
+2025-11-24T12:55:55.8439989-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8439648-03:00 [datanode-4001] [INFO] WRITE bloque=graninquisidor_block_22 size=1024 desde 127.0.0.1:56561
+2025-11-24T12:55:55.8445602-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.844516-03:00 [datanode-4001] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_22 path=data/graninquisidor_block_22 size=1024
+2025-11-24T12:55:55.844568-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8445336-03:00 [datanode-4001] [INFO] WRITE OK bloque=graninquisidor_block_22 desde 127.0.0.1:56561
+2025-11-24T12:55:55.8447171-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8446709-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56561
+2025-11-24T12:55:55.8447391-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8446727-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_22 a datanode localhost:4002 (size=1024)
+2025-11-24T12:55:55.8451196-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8450246-03:00 [datanode-4002] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56562
+2025-11-24T12:55:55.8451263-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8450483-03:00 [datanode-4002] [DEBUG] handleConn iniciado para 127.0.0.1:56562
+2025-11-24T12:55:55.8451367-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8450612-03:00 [datanode-4002] [DEBUG] Datanode recibió de 127.0.0.1:56562: "WRITE graninquisidor_block_22 1024"
+2025-11-24T12:55:55.8451427-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8450734-03:00 [datanode-4002] [INFO] WRITE bloque=graninquisidor_block_22 size=1024 desde 127.0.0.1:56562
+2025-11-24T12:55:55.8514422-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8513789-03:00 [datanode-4002] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_22 path=data/graninquisidor_block_22 size=1024
+2025-11-24T12:55:55.8514513-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.851399-03:00 [datanode-4002] [INFO] WRITE OK bloque=graninquisidor_block_22 desde 127.0.0.1:56562
+2025-11-24T12:55:55.8515439-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8514738-03:00 [datanode-4002] [DEBUG] Conexión cerrada desde 127.0.0.1:56562
+2025-11-24T12:55:55.8517249-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8516547-03:00 [client] [DEBUG] Subiendo bloque 22 (graninquisidor_block_23) rango=[22528:23552] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:55:55.8517315-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8516765-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_23 a datanode localhost:4001 (size=1024)
+2025-11-24T12:55:55.851811-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8517743-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56563
+2025-11-24T12:55:55.8518193-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8518001-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56563
+2025-11-24T12:55:55.8518458-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8518134-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56563: "WRITE graninquisidor_block_23 1024"
+2025-11-24T12:55:55.8518933-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8518294-03:00 [datanode-4001] [INFO] WRITE bloque=graninquisidor_block_23 size=1024 desde 127.0.0.1:56563
+2025-11-24T12:55:55.8523113-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8522677-03:00 [datanode-4001] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_23 path=data/graninquisidor_block_23 size=1024
+2025-11-24T12:55:55.8523372-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8523025-03:00 [datanode-4001] [INFO] WRITE OK bloque=graninquisidor_block_23 desde 127.0.0.1:56563
+2025-11-24T12:55:55.8523595-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8523089-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_23 a datanode localhost:4002 (size=1024)
+2025-11-24T12:55:55.852361-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8523245-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56563
+2025-11-24T12:55:55.852798-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8526841-03:00 [datanode-4002] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56564
+2025-11-24T12:55:55.8528038-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8527072-03:00 [datanode-4002] [DEBUG] handleConn iniciado para 127.0.0.1:56564
+2025-11-24T12:55:55.8528064-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.852741-03:00 [datanode-4002] [DEBUG] Datanode recibió de 127.0.0.1:56564: "WRITE graninquisidor_block_23 1024"
+2025-11-24T12:55:55.8528089-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8527595-03:00 [datanode-4002] [INFO] WRITE bloque=graninquisidor_block_23 size=1024 desde 127.0.0.1:56564
+2025-11-24T12:55:55.859192-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.859126-03:00 [datanode-4002] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_23 path=data/graninquisidor_block_23 size=1024
+2025-11-24T12:55:55.8592265-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8591646-03:00 [datanode-4002] [INFO] WRITE OK bloque=graninquisidor_block_23 desde 127.0.0.1:56564
+2025-11-24T12:55:55.8593121-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8592563-03:00 [client] [DEBUG] Subiendo bloque 23 (graninquisidor_block_24) rango=[23552:24576] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:55:55.8593257-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8592953-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_24 a datanode localhost:4001 (size=1024)
+2025-11-24T12:55:55.8594272-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8592956-03:00 [datanode-4002] [DEBUG] Conexión cerrada desde 127.0.0.1:56564
+2025-11-24T12:55:55.8597255-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8596567-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56565
+2025-11-24T12:55:55.859731-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8596834-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56565
+2025-11-24T12:55:55.8597348-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8596962-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56565: "WRITE graninquisidor_block_24 1024"
+2025-11-24T12:55:55.8597495-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.859707-03:00 [datanode-4001] [INFO] WRITE bloque=graninquisidor_block_24 size=1024 desde 127.0.0.1:56565
+2025-11-24T12:55:55.8602515-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8602111-03:00 [datanode-4001] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_24 path=data/graninquisidor_block_24 size=1024
+2025-11-24T12:55:55.8602606-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8602283-03:00 [datanode-4001] [INFO] WRITE OK bloque=graninquisidor_block_24 desde 127.0.0.1:56565
+2025-11-24T12:55:55.8603548-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8603091-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_24 a datanode localhost:4002 (size=1024)
+2025-11-24T12:55:55.8603798-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8603021-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56565
+2025-11-24T12:55:55.8607412-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8606659-03:00 [datanode-4002] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56566
+2025-11-24T12:55:55.8607473-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8606917-03:00 [datanode-4002] [DEBUG] handleConn iniciado para 127.0.0.1:56566
+2025-11-24T12:55:55.86075-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8607044-03:00 [datanode-4002] [DEBUG] Datanode recibió de 127.0.0.1:56566: "WRITE graninquisidor_block_24 1024"
+2025-11-24T12:55:55.8607524-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.860715-03:00 [datanode-4002] [INFO] WRITE bloque=graninquisidor_block_24 size=1024 desde 127.0.0.1:56566
+2025-11-24T12:55:55.8672288-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8671168-03:00 [datanode-4002] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_24 path=data/graninquisidor_block_24 size=1024
+2025-11-24T12:55:55.8672408-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8671364-03:00 [datanode-4002] [INFO] WRITE OK bloque=graninquisidor_block_24 desde 127.0.0.1:56566
+2025-11-24T12:55:55.8672623-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8672135-03:00 [client] [DEBUG] Subiendo bloque 24 (graninquisidor_block_25) rango=[24576:25600] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:55:55.8672778-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8672487-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_25 a datanode localhost:4001 (size=1024)
+2025-11-24T12:55:55.8673769-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8672807-03:00 [datanode-4002] [DEBUG] Conexión cerrada desde 127.0.0.1:56566
+2025-11-24T12:55:55.8676557-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8675759-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56567
+2025-11-24T12:55:55.8676613-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8676025-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56567
+2025-11-24T12:55:55.8676639-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8676142-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56567: "WRITE graninquisidor_block_25 1024"
+2025-11-24T12:55:55.8676661-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8676242-03:00 [datanode-4001] [INFO] WRITE bloque=graninquisidor_block_25 size=1024 desde 127.0.0.1:56567
+2025-11-24T12:55:55.8680949-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8680484-03:00 [datanode-4001] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_25 path=data/graninquisidor_block_25 size=1024
+2025-11-24T12:55:55.8681036-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8680655-03:00 [datanode-4001] [INFO] WRITE OK bloque=graninquisidor_block_25 desde 127.0.0.1:56567
+2025-11-24T12:55:55.8681621-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8681206-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_25 a datanode localhost:4002 (size=1024)
+2025-11-24T12:55:55.868171-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8681372-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56567
+2025-11-24T12:55:55.8684544-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8684214-03:00 [datanode-4002] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56568
+2025-11-24T12:55:55.8684665-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8684412-03:00 [datanode-4002] [DEBUG] handleConn iniciado para 127.0.0.1:56568
+2025-11-24T12:55:55.8684756-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8684554-03:00 [datanode-4002] [DEBUG] Datanode recibió de 127.0.0.1:56568: "WRITE graninquisidor_block_25 1024"
+2025-11-24T12:55:55.8685096-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8684704-03:00 [datanode-4002] [INFO] WRITE bloque=graninquisidor_block_25 size=1024 desde 127.0.0.1:56568
+2025-11-24T12:55:55.8747277-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8746778-03:00 [datanode-4002] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_25 path=data/graninquisidor_block_25 size=1024
+2025-11-24T12:55:55.8747397-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8746989-03:00 [datanode-4002] [INFO] WRITE OK bloque=graninquisidor_block_25 desde 127.0.0.1:56568
+2025-11-24T12:55:55.8748-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.87475-03:00 [client] [DEBUG] Subiendo bloque 25 (graninquisidor_block_26) rango=[25600:26426] replicas=[localhost:4001 localhost:4002]
+2025-11-24T12:55:55.8748098-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.8747673-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_26 a datanode localhost:4001 (size=826)
+2025-11-24T12:55:55.8748506-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.8747791-03:00 [datanode-4002] [DEBUG] Conexión cerrada desde 127.0.0.1:56568
+2025-11-24T12:55:55.8752095-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8751672-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56569
+2025-11-24T12:55:55.8752242-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.875192-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56569
+2025-11-24T12:55:55.87523-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8752049-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56569: "WRITE graninquisidor_block_26 826"
+2025-11-24T12:55:55.8752381-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.8752167-03:00 [datanode-4001] [INFO] WRITE bloque=graninquisidor_block_26 size=826 desde 127.0.0.1:56569
+2025-11-24T12:55:55.9400212-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.9399091-03:00 [datanode-4001] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_26 path=data/graninquisidor_block_26 size=826
+2025-11-24T12:55:55.9400524-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.9399691-03:00 [datanode-4001] [INFO] WRITE OK bloque=graninquisidor_block_26 desde 127.0.0.1:56569
+2025-11-24T12:55:55.9401935-03:00 [127.0.0.1:56517] 2025-11-24T12:55:55.9400834-03:00 [client] [DEBUG] Enviando bloque graninquisidor_block_26 a datanode localhost:4002 (size=826)
+2025-11-24T12:55:55.9403314-03:00 [127.0.0.1:56511] 2025-11-24T12:55:55.940148-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56569
+2025-11-24T12:55:55.9409447-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.9408481-03:00 [datanode-4002] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56570
+2025-11-24T12:55:55.9409767-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.9409089-03:00 [datanode-4002] [DEBUG] handleConn iniciado para 127.0.0.1:56570
+2025-11-24T12:55:55.9409976-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.9409474-03:00 [datanode-4002] [DEBUG] Datanode recibió de 127.0.0.1:56570: "WRITE graninquisidor_block_26 826"
+2025-11-24T12:55:55.9411327-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.9409854-03:00 [datanode-4002] [INFO] WRITE bloque=graninquisidor_block_26 size=826 desde 127.0.0.1:56570
+2025-11-24T12:55:55.9479737-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.9479104-03:00 [datanode-4002] [INFO] fileDataNode: StoreBlock OK id=graninquisidor_block_26 path=data/graninquisidor_block_26 size=826
+2025-11-24T12:55:55.9479852-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.9479478-03:00 [datanode-4002] [INFO] WRITE OK bloque=graninquisidor_block_26 desde 127.0.0.1:56570
+2025-11-24T12:55:55.9481069-03:00 [127.0.0.1:56398] 2025-11-24T12:55:55.9480432-03:00 [datanode-4002] [DEBUG] Conexión cerrada desde 127.0.0.1:56570
+2025-11-24T12:56:19.4984226-03:00 [127.0.0.1:56378] 2025-11-24T12:56:19.4983136-03:00 [namenode] [INFO] Nueva conexión desde 127.0.0.1:56574
+2025-11-24T12:56:19.498432-03:00 [127.0.0.1:56378] 2025-11-24T12:56:19.4983452-03:00 [namenode] [DEBUG] handleConn iniciado para 127.0.0.1:56574
+2025-11-24T12:56:19.4984376-03:00 [127.0.0.1:56378] 2025-11-24T12:56:19.4983605-03:00 [namenode] [DEBUG] Mensaje recibido de 127.0.0.1:56574: "LS"
+2025-11-24T12:56:19.4984417-03:00 [127.0.0.1:56378] 2025-11-24T12:56:19.4983725-03:00 [namenode] [INFO] LS recibido desde 127.0.0.1:56574
+2025-11-24T12:56:19.4984517-03:00 [127.0.0.1:56378] 2025-11-24T12:56:19.498384-03:00 [namenode] [INFO] HandleList: listando archivos
+2025-11-24T12:56:19.4984545-03:00 [127.0.0.1:56378] 2025-11-24T12:56:19.4983947-03:00 [namenode] [INFO] HandleList: se encontraron 5 archivos
+2025-11-24T12:56:19.4985142-03:00 [127.0.0.1:56573] 2025-11-24T12:56:19.4981669-03:00 [client] [INFO] cliente iniciado con args: [./bin/dfsclient ls]
+2025-11-24T12:56:19.4985191-03:00 [127.0.0.1:56573] 2025-11-24T12:56:19.49845-03:00 [client] [INFO] comando recibido: ls
+2025-11-24T12:56:19.4985228-03:00 [127.0.0.1:56573] 2025-11-24T12:56:19.4984758-03:00 [client] [INFO] ejecutando ls()
+2025-11-24T12:56:19.4985213-03:00 [127.0.0.1:56378] 2025-11-24T12:56:19.4984689-03:00 [namenode] [DEBUG] Conexión cerrada desde 127.0.0.1:56574: EOF
+2025-11-24T12:56:19.4985419-03:00 [127.0.0.1:56573] 2025-11-24T12:56:19.4984851-03:00 [client] [INFO] LS: el namenode devolvió 5 archivos
+2025-11-24T12:56:19.498545-03:00 [127.0.0.1:56573] 2025-11-24T12:56:19.4984918-03:00 [client] [INFO] ls devolvió 5 archivos
+2025-11-24T12:56:55.7308351-03:00 [127.0.0.1:56378] 2025-11-24T12:56:55.7307852-03:00 [namenode] [INFO] Nueva conexión desde 127.0.0.1:56582
+2025-11-24T12:56:55.7308433-03:00 [127.0.0.1:56378] 2025-11-24T12:56:55.7308141-03:00 [namenode] [DEBUG] handleConn iniciado para 127.0.0.1:56582
+2025-11-24T12:56:55.7308978-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7306293-03:00 [client] [INFO] cliente iniciado con args: [./bin/dfsclient get graninquisidor dostoievsky]
+2025-11-24T12:56:55.7309091-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7308473-03:00 [client] [INFO] comando recibido: get
+2025-11-24T12:56:55.7309119-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7308625-03:00 [client] [INFO] ejecutando get(remote=graninquisidor, local=dostoievsky)
+2025-11-24T12:56:55.731183-03:00 [127.0.0.1:56378] 2025-11-24T12:56:55.7311023-03:00 [namenode] [DEBUG] Mensaje recibido de 127.0.0.1:56582: "GET graninquisidor"
+2025-11-24T12:56:55.7311896-03:00 [127.0.0.1:56378] 2025-11-24T12:56:55.7311194-03:00 [namenode] [INFO] HandleGet TCP: filename=graninquisidor desde 127.0.0.1:56582
+2025-11-24T12:56:55.731192-03:00 [127.0.0.1:56378] 2025-11-24T12:56:55.7311365-03:00 [namenode] [INFO] HandleGet: filename=graninquisidor
+2025-11-24T12:56:55.731197-03:00 [127.0.0.1:56378] 2025-11-24T12:56:55.731147-03:00 [namenode] [DEBUG] HandleGet: archivo graninquisidor tiene 26 bloques
+2025-11-24T12:56:55.7311991-03:00 [127.0.0.1:56378] 2025-11-24T12:56:55.7311569-03:00 [namenode] [DEBUG] Enviando METADATA GET para graninquisidor a 127.0.0.1:56582
+2025-11-24T12:56:55.7313158-03:00 [127.0.0.1:56378] 2025-11-24T12:56:55.7312733-03:00 [namenode] [DEBUG] Conexión cerrada desde 127.0.0.1:56582: EOF
+2025-11-24T12:56:55.7313497-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7312768-03:00 [client] [DEBUG] METADATA recibido en GET para graninquisidor: {"file_name":"graninquisidor","block_size":1024,"blocks":[{"block_id":"graninquisidor_block_1","replicas":["localhost:4001","localhost:4002"]},{"block_id":"graninquisidor_block_2","replicas":["localhost:4001","localhost:4002"]},{"block_id":"graninquisidor_block_3","replicas":["localhost:4001","localhost:4002"]},{"block_id":"graninquisidor_block_4","replicas":["localhost:4001","localhost:4002"]},{"block_id":"graninquisidor_block_5","replicas":["localhost:4001","localhost:4002"]},{"block_id":"graninquisidor_block_6","replicas":["localhost:4001","localhost:4002"]},{"block_id":"graninquisidor_block_7","replicas":["localhost:4001","localhost:4002"]},{"block_id":"graninquisidor_block_8","replicas":["localhost:4001","localhost:4002"]},{"block_id":"graninquisidor_block_9","replicas":["localhost:4001","localhost:4002"]},{"block_id":"graninquisidor_block_10","replicas":["localhost:4001","localhost:4002"]},{"block_id":"graninquisidor_block_11","replicas":["localhost:4001","localhost:4002"]},{"block_id":"graninquisidor_block_12","replicas":["localhost:4001","localhost:4002"]},{"block_id":"graninquisidor_block_13","replicas":["localhost:4001","localhost:4002"]},{"block_id":"graninquisidor_block_14","replicas":["localhost:4001","localhost:4002"]},{"block_id":"graninquisidor_block_15","replicas":["localhost:4001","localhost:4002"]},{"block_id":"graninquisidor_block_16","replicas":["localhost:4001","localhost:4002"]},{"block_id":"graninquisidor_block_17","replicas":["localhost:4001","localhost:4002"]},{"block_id":"graninquisidor_block_18","replicas":["localhost:4001","localhost:4002"]},{"block_id":"graninquisidor_block_19","replicas":["localhost:4001","localhost:4002"]},{"block_id":"graninquisidor_block_20","replicas":["localhost:4001","localhost:4002"]},{"block_id":"graninquisidor_block_21","replicas":["localhost:4001","localhost:4002"]},{"block_id":"graninquisidor_block_22","replicas":["localhost:4001","localhost:4002"]},{"block_id":"graninquisidor_block_23","replicas":["localhost:4001","localhost:4002"]},{"block_id":"graninquisidor_block_24","replicas":["localhost:4001","localhost:4002"]},{"block_id":"graninquisidor_block_25","replicas":["localhost:4001","localhost:4002"]},{"block_id":"graninquisidor_block_26","replicas":["localhost:4001","localhost:4002"]}],"status":"OK"}
+2025-11-24T12:56:55.7317894-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7317423-03:00 [client] [INFO] Plan de GET: file=graninquisidor blocks=26
+2025-11-24T12:56:55.7318059-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7317668-03:00 [client] [DEBUG] Intentando leer bloque graninquisidor_block_1 desde localhost:4001
+2025-11-24T12:56:55.731849-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7318153-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56583
+2025-11-24T12:56:55.7318822-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7318392-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56583
+2025-11-24T12:56:55.7319626-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7318707-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56583: "READ graninquisidor_block_1"
+2025-11-24T12:56:55.731969-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7318821-03:00 [datanode-4001] [INFO] READ bloque=graninquisidor_block_1 desde 127.0.0.1:56583
+2025-11-24T12:56:55.7321918-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7321575-03:00 [datanode-4001] [DEBUG] fileDataNode: RetrieveBlock OK id=graninquisidor_block_1 path=data/graninquisidor_block_1 size=1024
+2025-11-24T12:56:55.7322051-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7321662-03:00 [datanode-4001] [DEBUG] READ OK bloque=graninquisidor_block_1 a 127.0.0.1:56583 (size=1024)
+2025-11-24T12:56:55.7323127-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7322759-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56583
+2025-11-24T12:56:55.7323821-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7323005-03:00 [client] [DEBUG] Bloque graninquisidor_block_1 leído correctamente desde localhost:4001 (size=1024)
+2025-11-24T12:56:55.7324072-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7323357-03:00 [client] [DEBUG] Intentando leer bloque graninquisidor_block_2 desde localhost:4001
+2025-11-24T12:56:55.7325659-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7325324-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56584
+2025-11-24T12:56:55.7325744-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7325561-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56584
+2025-11-24T12:56:55.732677-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7326254-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56584: "READ graninquisidor_block_2"
+2025-11-24T12:56:55.7326828-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7326439-03:00 [datanode-4001] [INFO] READ bloque=graninquisidor_block_2 desde 127.0.0.1:56584
+2025-11-24T12:56:55.7329499-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.732918-03:00 [datanode-4001] [DEBUG] fileDataNode: RetrieveBlock OK id=graninquisidor_block_2 path=data/graninquisidor_block_2 size=1024
+2025-11-24T12:56:55.7329714-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7329454-03:00 [datanode-4001] [DEBUG] READ OK bloque=graninquisidor_block_2 a 127.0.0.1:56584 (size=1024)
+2025-11-24T12:56:55.7330192-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.732986-03:00 [client] [DEBUG] Bloque graninquisidor_block_2 leído correctamente desde localhost:4001 (size=1024)
+2025-11-24T12:56:55.73304-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7329979-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56584
+2025-11-24T12:56:55.7330413-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7330127-03:00 [client] [DEBUG] Intentando leer bloque graninquisidor_block_3 desde localhost:4001
+2025-11-24T12:56:55.7333179-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7332864-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56585
+2025-11-24T12:56:55.7333313-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7333088-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56585
+2025-11-24T12:56:55.7333515-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7333252-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56585: "READ graninquisidor_block_3"
+2025-11-24T12:56:55.7333718-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7333399-03:00 [datanode-4001] [INFO] READ bloque=graninquisidor_block_3 desde 127.0.0.1:56585
+2025-11-24T12:56:55.7336189-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7335882-03:00 [datanode-4001] [DEBUG] fileDataNode: RetrieveBlock OK id=graninquisidor_block_3 path=data/graninquisidor_block_3 size=1024
+2025-11-24T12:56:55.7336353-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7336066-03:00 [datanode-4001] [DEBUG] READ OK bloque=graninquisidor_block_3 a 127.0.0.1:56585 (size=1024)
+2025-11-24T12:56:55.7336644-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7336314-03:00 [client] [DEBUG] Bloque graninquisidor_block_3 leído correctamente desde localhost:4001 (size=1024)
+2025-11-24T12:56:55.7336754-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.733646-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56585
+2025-11-24T12:56:55.7336805-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7336568-03:00 [client] [DEBUG] Intentando leer bloque graninquisidor_block_4 desde localhost:4001
+2025-11-24T12:56:55.7339083-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7338705-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56586
+2025-11-24T12:56:55.7339145-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7338947-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56586
+2025-11-24T12:56:55.7339309-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7339064-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56586: "READ graninquisidor_block_4"
+2025-11-24T12:56:55.7339345-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7339173-03:00 [datanode-4001] [INFO] READ bloque=graninquisidor_block_4 desde 127.0.0.1:56586
+2025-11-24T12:56:55.7341613-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.734132-03:00 [datanode-4001] [DEBUG] fileDataNode: RetrieveBlock OK id=graninquisidor_block_4 path=data/graninquisidor_block_4 size=1024
+2025-11-24T12:56:55.7341743-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.734154-03:00 [datanode-4001] [DEBUG] READ OK bloque=graninquisidor_block_4 a 127.0.0.1:56586 (size=1024)
+2025-11-24T12:56:55.7342394-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7342133-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56586
+2025-11-24T12:56:55.7342678-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7342093-03:00 [client] [DEBUG] Bloque graninquisidor_block_4 leído correctamente desde localhost:4001 (size=1024)
+2025-11-24T12:56:55.7342718-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7342371-03:00 [client] [DEBUG] Intentando leer bloque graninquisidor_block_5 desde localhost:4001
+2025-11-24T12:56:55.7344075-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7343752-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56587
+2025-11-24T12:56:55.7344181-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7343952-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56587
+2025-11-24T12:56:55.7344495-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7344158-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56587: "READ graninquisidor_block_5"
+2025-11-24T12:56:55.7344561-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.734434-03:00 [datanode-4001] [INFO] READ bloque=graninquisidor_block_5 desde 127.0.0.1:56587
+2025-11-24T12:56:55.7347011-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7346734-03:00 [datanode-4001] [DEBUG] fileDataNode: RetrieveBlock OK id=graninquisidor_block_5 path=data/graninquisidor_block_5 size=1024
+2025-11-24T12:56:55.7347166-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7346933-03:00 [datanode-4001] [DEBUG] READ OK bloque=graninquisidor_block_5 a 127.0.0.1:56587 (size=1024)
+2025-11-24T12:56:55.7347962-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7347439-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56587
+2025-11-24T12:56:55.7349022-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.734858-03:00 [client] [DEBUG] Bloque graninquisidor_block_5 leído correctamente desde localhost:4001 (size=1024)
+2025-11-24T12:56:55.7349084-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7348843-03:00 [client] [DEBUG] Intentando leer bloque graninquisidor_block_6 desde localhost:4001
+2025-11-24T12:56:55.7349471-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7349165-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56588
+2025-11-24T12:56:55.7349669-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.734935-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56588
+2025-11-24T12:56:55.7349721-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.734947-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56588: "READ graninquisidor_block_6"
+2025-11-24T12:56:55.7349742-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7349582-03:00 [datanode-4001] [INFO] READ bloque=graninquisidor_block_6 desde 127.0.0.1:56588
+2025-11-24T12:56:55.7352306-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7352019-03:00 [datanode-4001] [DEBUG] fileDataNode: RetrieveBlock OK id=graninquisidor_block_6 path=data/graninquisidor_block_6 size=1024
+2025-11-24T12:56:55.7352592-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7352265-03:00 [datanode-4001] [DEBUG] READ OK bloque=graninquisidor_block_6 a 127.0.0.1:56588 (size=1024)
+2025-11-24T12:56:55.7352936-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7352613-03:00 [client] [DEBUG] Bloque graninquisidor_block_6 leído correctamente desde localhost:4001 (size=1024)
+2025-11-24T12:56:55.7353-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.735283-03:00 [client] [DEBUG] Intentando leer bloque graninquisidor_block_7 desde localhost:4001
+2025-11-24T12:56:55.7353258-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7352759-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56588
+2025-11-24T12:56:55.7354768-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7354307-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56589
+2025-11-24T12:56:55.7354825-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7354495-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56589
+2025-11-24T12:56:55.7354851-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7354615-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56589: "READ graninquisidor_block_7"
+2025-11-24T12:56:55.7354911-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7354732-03:00 [datanode-4001] [INFO] READ bloque=graninquisidor_block_7 desde 127.0.0.1:56589
+2025-11-24T12:56:55.7357404-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7357106-03:00 [datanode-4001] [DEBUG] fileDataNode: RetrieveBlock OK id=graninquisidor_block_7 path=data/graninquisidor_block_7 size=1024
+2025-11-24T12:56:55.7357616-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7357362-03:00 [datanode-4001] [DEBUG] READ OK bloque=graninquisidor_block_7 a 127.0.0.1:56589 (size=1024)
+2025-11-24T12:56:55.7358016-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7357686-03:00 [client] [DEBUG] Bloque graninquisidor_block_7 leído correctamente desde localhost:4001 (size=1024)
+2025-11-24T12:56:55.7358263-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7357942-03:00 [client] [DEBUG] Intentando leer bloque graninquisidor_block_8 desde localhost:4001
+2025-11-24T12:56:55.7358281-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7357827-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56589
+2025-11-24T12:56:55.7360035-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.735974-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56590
+2025-11-24T12:56:55.7360116-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7359927-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56590
+2025-11-24T12:56:55.7360203-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7360049-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56590: "READ graninquisidor_block_8"
+2025-11-24T12:56:55.7360394-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7360161-03:00 [datanode-4001] [INFO] READ bloque=graninquisidor_block_8 desde 127.0.0.1:56590
+2025-11-24T12:56:55.736309-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7362746-03:00 [datanode-4001] [DEBUG] fileDataNode: RetrieveBlock OK id=graninquisidor_block_8 path=data/graninquisidor_block_8 size=1024
+2025-11-24T12:56:55.7363172-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7363006-03:00 [datanode-4001] [DEBUG] READ OK bloque=graninquisidor_block_8 a 127.0.0.1:56590 (size=1024)
+2025-11-24T12:56:55.7363691-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7363433-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56590
+2025-11-24T12:56:55.7364669-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7364345-03:00 [client] [DEBUG] Bloque graninquisidor_block_8 leído correctamente desde localhost:4001 (size=1024)
+2025-11-24T12:56:55.7364906-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7364551-03:00 [client] [DEBUG] Intentando leer bloque graninquisidor_block_9 desde localhost:4001
+2025-11-24T12:56:55.7365778-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7365481-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56591
+2025-11-24T12:56:55.7365866-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.736567-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56591
+2025-11-24T12:56:55.7366015-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7365796-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56591: "READ graninquisidor_block_9"
+2025-11-24T12:56:55.7366296-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.736592-03:00 [datanode-4001] [INFO] READ bloque=graninquisidor_block_9 desde 127.0.0.1:56591
+2025-11-24T12:56:55.7368864-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7368564-03:00 [datanode-4001] [DEBUG] fileDataNode: RetrieveBlock OK id=graninquisidor_block_9 path=data/graninquisidor_block_9 size=1024
+2025-11-24T12:56:55.7368986-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7368765-03:00 [datanode-4001] [DEBUG] READ OK bloque=graninquisidor_block_9 a 127.0.0.1:56591 (size=1024)
+2025-11-24T12:56:55.7369345-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7369027-03:00 [client] [DEBUG] Bloque graninquisidor_block_9 leído correctamente desde localhost:4001 (size=1024)
+2025-11-24T12:56:55.7369461-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.736922-03:00 [client] [DEBUG] Intentando leer bloque graninquisidor_block_10 desde localhost:4001
+2025-11-24T12:56:55.7369782-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.736943-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56591
+2025-11-24T12:56:55.737123-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7370943-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56592
+2025-11-24T12:56:55.7371311-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7371129-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56592
+2025-11-24T12:56:55.7371571-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.737125-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56592: "READ graninquisidor_block_10"
+2025-11-24T12:56:55.7371629-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7371443-03:00 [datanode-4001] [INFO] READ bloque=graninquisidor_block_10 desde 127.0.0.1:56592
+2025-11-24T12:56:55.737454-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7374065-03:00 [datanode-4001] [DEBUG] fileDataNode: RetrieveBlock OK id=graninquisidor_block_10 path=data/graninquisidor_block_10 size=1024
+2025-11-24T12:56:55.7374608-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7374304-03:00 [datanode-4001] [DEBUG] READ OK bloque=graninquisidor_block_10 a 127.0.0.1:56592 (size=1024)
+2025-11-24T12:56:55.7375043-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7374654-03:00 [client] [DEBUG] Bloque graninquisidor_block_10 leído correctamente desde localhost:4001 (size=1024)
+2025-11-24T12:56:55.7375176-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7374918-03:00 [client] [DEBUG] Intentando leer bloque graninquisidor_block_11 desde localhost:4001
+2025-11-24T12:56:55.7375346-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7374838-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56592
+2025-11-24T12:56:55.7376779-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7376504-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56593
+2025-11-24T12:56:55.7376863-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7376689-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56593
+2025-11-24T12:56:55.7377002-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7376809-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56593: "READ graninquisidor_block_11"
+2025-11-24T12:56:55.7377067-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7376921-03:00 [datanode-4001] [INFO] READ bloque=graninquisidor_block_11 desde 127.0.0.1:56593
+2025-11-24T12:56:55.7379845-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.737957-03:00 [datanode-4001] [DEBUG] fileDataNode: RetrieveBlock OK id=graninquisidor_block_11 path=data/graninquisidor_block_11 size=1024
+2025-11-24T12:56:55.7379927-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7379779-03:00 [datanode-4001] [DEBUG] READ OK bloque=graninquisidor_block_11 a 127.0.0.1:56593 (size=1024)
+2025-11-24T12:56:55.7380439-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7380103-03:00 [client] [DEBUG] Bloque graninquisidor_block_11 leído correctamente desde localhost:4001 (size=1024)
+2025-11-24T12:56:55.7380649-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7380346-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56593
+2025-11-24T12:56:55.7380664-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7380365-03:00 [client] [DEBUG] Intentando leer bloque graninquisidor_block_12 desde localhost:4001
+2025-11-24T12:56:55.7382412-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7382127-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56594
+2025-11-24T12:56:55.7382493-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7382311-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56594
+2025-11-24T12:56:55.7382626-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7382432-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56594: "READ graninquisidor_block_12"
+2025-11-24T12:56:55.7382876-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7382543-03:00 [datanode-4001] [INFO] READ bloque=graninquisidor_block_12 desde 127.0.0.1:56594
+2025-11-24T12:56:55.7385412-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7385035-03:00 [datanode-4001] [DEBUG] fileDataNode: RetrieveBlock OK id=graninquisidor_block_12 path=data/graninquisidor_block_12 size=1024
+2025-11-24T12:56:55.7385714-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7385404-03:00 [datanode-4001] [DEBUG] READ OK bloque=graninquisidor_block_12 a 127.0.0.1:56594 (size=1024)
+2025-11-24T12:56:55.7386019-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7385703-03:00 [client] [DEBUG] Bloque graninquisidor_block_12 leído correctamente desde localhost:4001 (size=1024)
+2025-11-24T12:56:55.7386074-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7385847-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56594
+2025-11-24T12:56:55.7386132-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7385906-03:00 [client] [DEBUG] Intentando leer bloque graninquisidor_block_13 desde localhost:4001
+2025-11-24T12:56:55.738771-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7387404-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56595
+2025-11-24T12:56:55.7387796-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7387609-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56595
+2025-11-24T12:56:55.7387934-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7387729-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56595: "READ graninquisidor_block_13"
+2025-11-24T12:56:55.7388005-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.738784-03:00 [datanode-4001] [INFO] READ bloque=graninquisidor_block_13 desde 127.0.0.1:56595
+2025-11-24T12:56:55.7390632-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.739025-03:00 [datanode-4001] [DEBUG] fileDataNode: RetrieveBlock OK id=graninquisidor_block_13 path=data/graninquisidor_block_13 size=1024
+2025-11-24T12:56:55.7390722-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7390542-03:00 [datanode-4001] [DEBUG] READ OK bloque=graninquisidor_block_13 a 127.0.0.1:56595 (size=1024)
+2025-11-24T12:56:55.7391193-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7390879-03:00 [client] [DEBUG] Bloque graninquisidor_block_13 leído correctamente desde localhost:4001 (size=1024)
+2025-11-24T12:56:55.7391277-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7391073-03:00 [client] [DEBUG] Intentando leer bloque graninquisidor_block_14 desde localhost:4001
+2025-11-24T12:56:55.7391438-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7391136-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56595
+2025-11-24T12:56:55.7393031-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7392591-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56596
+2025-11-24T12:56:55.7393092-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7392776-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56596
+2025-11-24T12:56:55.7393118-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7392894-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56596: "READ graninquisidor_block_14"
+2025-11-24T12:56:55.7393177-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7393011-03:00 [datanode-4001] [INFO] READ bloque=graninquisidor_block_14 desde 127.0.0.1:56596
+2025-11-24T12:56:55.7395813-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7395496-03:00 [datanode-4001] [DEBUG] fileDataNode: RetrieveBlock OK id=graninquisidor_block_14 path=data/graninquisidor_block_14 size=1024
+2025-11-24T12:56:55.7396076-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.739582-03:00 [datanode-4001] [DEBUG] READ OK bloque=graninquisidor_block_14 a 127.0.0.1:56596 (size=1024)
+2025-11-24T12:56:55.7396551-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7396209-03:00 [client] [DEBUG] Bloque graninquisidor_block_14 leído correctamente desde localhost:4001 (size=1024)
+2025-11-24T12:56:55.7396613-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7396332-03:00 [client] [DEBUG] Intentando leer bloque graninquisidor_block_15 desde localhost:4001
+2025-11-24T12:56:55.739676-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7396436-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56596
+2025-11-24T12:56:55.7398212-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7397932-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56597
+2025-11-24T12:56:55.73983-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7398116-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56597
+2025-11-24T12:56:55.7398456-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7398237-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56597: "READ graninquisidor_block_15"
+2025-11-24T12:56:55.7398595-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7398351-03:00 [datanode-4001] [INFO] READ bloque=graninquisidor_block_15 desde 127.0.0.1:56597
+2025-11-24T12:56:55.7401155-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7400832-03:00 [datanode-4001] [DEBUG] fileDataNode: RetrieveBlock OK id=graninquisidor_block_15 path=data/graninquisidor_block_15 size=1024
+2025-11-24T12:56:55.740141-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7401048-03:00 [datanode-4001] [DEBUG] READ OK bloque=graninquisidor_block_15 a 127.0.0.1:56597 (size=1024)
+2025-11-24T12:56:55.7401616-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7401295-03:00 [client] [DEBUG] Bloque graninquisidor_block_15 leído correctamente desde localhost:4001 (size=1024)
+2025-11-24T12:56:55.7401739-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7401476-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56597
+2025-11-24T12:56:55.7401802-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7401583-03:00 [client] [DEBUG] Intentando leer bloque graninquisidor_block_16 desde localhost:4001
+2025-11-24T12:56:55.7403301-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7403013-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56598
+2025-11-24T12:56:55.7403383-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7403205-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56598
+2025-11-24T12:56:55.7403514-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7403322-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56598: "READ graninquisidor_block_16"
+2025-11-24T12:56:55.7403652-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7403436-03:00 [datanode-4001] [INFO] READ bloque=graninquisidor_block_16 desde 127.0.0.1:56598
+2025-11-24T12:56:55.7406414-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7406092-03:00 [datanode-4001] [DEBUG] fileDataNode: RetrieveBlock OK id=graninquisidor_block_16 path=data/graninquisidor_block_16 size=1024
+2025-11-24T12:56:55.7406768-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7406356-03:00 [datanode-4001] [DEBUG] READ OK bloque=graninquisidor_block_16 a 127.0.0.1:56598 (size=1024)
+2025-11-24T12:56:55.7407117-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7406861-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56598
+2025-11-24T12:56:55.7408517-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7408234-03:00 [client] [DEBUG] Bloque graninquisidor_block_16 leído correctamente desde localhost:4001 (size=1024)
+2025-11-24T12:56:55.7408599-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7408397-03:00 [client] [DEBUG] Intentando leer bloque graninquisidor_block_17 desde localhost:4001
+2025-11-24T12:56:55.741136-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7411013-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56599
+2025-11-24T12:56:55.7411417-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7411201-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56599
+2025-11-24T12:56:55.7411469-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7411324-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56599: "READ graninquisidor_block_17"
+2025-11-24T12:56:55.7411697-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7411445-03:00 [datanode-4001] [INFO] READ bloque=graninquisidor_block_17 desde 127.0.0.1:56599
+2025-11-24T12:56:55.741213-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7411806-03:00 [datanode-4001] [DEBUG] fileDataNode: RetrieveBlock OK id=graninquisidor_block_17 path=data/graninquisidor_block_17 size=1024
+2025-11-24T12:56:55.7412254-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7412086-03:00 [datanode-4001] [DEBUG] READ OK bloque=graninquisidor_block_17 a 127.0.0.1:56599 (size=1024)
+2025-11-24T12:56:55.7412764-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.741241-03:00 [client] [DEBUG] Bloque graninquisidor_block_17 leído correctamente desde localhost:4001 (size=1024)
+2025-11-24T12:56:55.7412893-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7412671-03:00 [client] [DEBUG] Intentando leer bloque graninquisidor_block_18 desde localhost:4001
+2025-11-24T12:56:55.7413005-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7412657-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56599
+2025-11-24T12:56:55.7414676-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.741432-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56600
+2025-11-24T12:56:55.7414824-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7414565-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56600
+2025-11-24T12:56:55.7414852-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7414683-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56600: "READ graninquisidor_block_18"
+2025-11-24T12:56:55.741496-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7414798-03:00 [datanode-4001] [INFO] READ bloque=graninquisidor_block_18 desde 127.0.0.1:56600
+2025-11-24T12:56:55.7417635-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7417321-03:00 [datanode-4001] [DEBUG] fileDataNode: RetrieveBlock OK id=graninquisidor_block_18 path=data/graninquisidor_block_18 size=1024
+2025-11-24T12:56:55.7417879-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7417605-03:00 [datanode-4001] [DEBUG] READ OK bloque=graninquisidor_block_18 a 127.0.0.1:56600 (size=1024)
+2025-11-24T12:56:55.7418335-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7418021-03:00 [client] [DEBUG] Bloque graninquisidor_block_18 leído correctamente desde localhost:4001 (size=1024)
+2025-11-24T12:56:55.7418418-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7418214-03:00 [client] [DEBUG] Intentando leer bloque graninquisidor_block_19 desde localhost:4001
+2025-11-24T12:56:55.7418557-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7418244-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56600
+2025-11-24T12:56:55.7420139-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7419852-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56601
+2025-11-24T12:56:55.7420222-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7420037-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56601
+2025-11-24T12:56:55.7420445-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7420157-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56601: "READ graninquisidor_block_19"
+2025-11-24T12:56:55.7420526-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7420333-03:00 [datanode-4001] [INFO] READ bloque=graninquisidor_block_19 desde 127.0.0.1:56601
+2025-11-24T12:56:55.7423067-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7422747-03:00 [datanode-4001] [DEBUG] fileDataNode: RetrieveBlock OK id=graninquisidor_block_19 path=data/graninquisidor_block_19 size=1024
+2025-11-24T12:56:55.7423214-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7422955-03:00 [datanode-4001] [DEBUG] READ OK bloque=graninquisidor_block_19 a 127.0.0.1:56601 (size=1024)
+2025-11-24T12:56:55.7423712-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7423417-03:00 [client] [DEBUG] Bloque graninquisidor_block_19 leído correctamente desde localhost:4001 (size=1024)
+2025-11-24T12:56:55.7423815-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.742361-03:00 [client] [DEBUG] Intentando leer bloque graninquisidor_block_20 desde localhost:4001
+2025-11-24T12:56:55.7423932-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7423568-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56601
+2025-11-24T12:56:55.7425423-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7425139-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56602
+2025-11-24T12:56:55.7425591-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7425322-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56602
+2025-11-24T12:56:55.7425619-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.742544-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56602: "READ graninquisidor_block_20"
+2025-11-24T12:56:55.7425683-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7425553-03:00 [datanode-4001] [INFO] READ bloque=graninquisidor_block_20 desde 127.0.0.1:56602
+2025-11-24T12:56:55.742845-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7428137-03:00 [datanode-4001] [DEBUG] fileDataNode: RetrieveBlock OK id=graninquisidor_block_20 path=data/graninquisidor_block_20 size=1024
+2025-11-24T12:56:55.7428686-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7428422-03:00 [datanode-4001] [DEBUG] READ OK bloque=graninquisidor_block_20 a 127.0.0.1:56602 (size=1024)
+2025-11-24T12:56:55.7429092-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7428752-03:00 [client] [DEBUG] Bloque graninquisidor_block_20 leído correctamente desde localhost:4001 (size=1024)
+2025-11-24T12:56:55.7429246-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7428996-03:00 [client] [DEBUG] Intentando leer bloque graninquisidor_block_21 desde localhost:4001
+2025-11-24T12:56:55.7429385-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.742893-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56602
+2025-11-24T12:56:55.7432303-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7431916-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56603
+2025-11-24T12:56:55.743241-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7432151-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56603
+2025-11-24T12:56:55.7432489-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7432301-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56603: "READ graninquisidor_block_21"
+2025-11-24T12:56:55.7432756-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7432445-03:00 [datanode-4001] [INFO] READ bloque=graninquisidor_block_21 desde 127.0.0.1:56603
+2025-11-24T12:56:55.7434119-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7433815-03:00 [datanode-4001] [DEBUG] fileDataNode: RetrieveBlock OK id=graninquisidor_block_21 path=data/graninquisidor_block_21 size=1024
+2025-11-24T12:56:55.7434399-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7434051-03:00 [datanode-4001] [DEBUG] READ OK bloque=graninquisidor_block_21 a 127.0.0.1:56603 (size=1024)
+2025-11-24T12:56:55.7434982-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7434544-03:00 [client] [DEBUG] Bloque graninquisidor_block_21 leído correctamente desde localhost:4001 (size=1024)
+2025-11-24T12:56:55.7435058-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7434694-03:00 [client] [DEBUG] Intentando leer bloque graninquisidor_block_22 desde localhost:4001
+2025-11-24T12:56:55.7435247-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7434829-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56603
+2025-11-24T12:56:55.7437308-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7436897-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56604
+2025-11-24T12:56:55.7437428-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.743716-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56604
+2025-11-24T12:56:55.7437545-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7437345-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56604: "READ graninquisidor_block_22"
+2025-11-24T12:56:55.7437813-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7437521-03:00 [datanode-4001] [INFO] READ bloque=graninquisidor_block_22 desde 127.0.0.1:56604
+2025-11-24T12:56:55.744068-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7440371-03:00 [datanode-4001] [DEBUG] fileDataNode: RetrieveBlock OK id=graninquisidor_block_22 path=data/graninquisidor_block_22 size=1024
+2025-11-24T12:56:55.7441105-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7440649-03:00 [datanode-4001] [DEBUG] READ OK bloque=graninquisidor_block_22 a 127.0.0.1:56604 (size=1024)
+2025-11-24T12:56:55.7441503-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.744117-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56604
+2025-11-24T12:56:55.7441747-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7441187-03:00 [client] [DEBUG] Bloque graninquisidor_block_22 leído correctamente desde localhost:4001 (size=1024)
+2025-11-24T12:56:55.7441787-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7441471-03:00 [client] [DEBUG] Intentando leer bloque graninquisidor_block_23 desde localhost:4001
+2025-11-24T12:56:55.7444022-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7443692-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56605
+2025-11-24T12:56:55.7444155-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7443892-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56605
+2025-11-24T12:56:55.7444323-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7444111-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56605: "READ graninquisidor_block_23"
+2025-11-24T12:56:55.7444575-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7444263-03:00 [datanode-4001] [INFO] READ bloque=graninquisidor_block_23 desde 127.0.0.1:56605
+2025-11-24T12:56:55.7448159-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7447778-03:00 [datanode-4001] [DEBUG] fileDataNode: RetrieveBlock OK id=graninquisidor_block_23 path=data/graninquisidor_block_23 size=1024
+2025-11-24T12:56:55.744826-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7447951-03:00 [datanode-4001] [DEBUG] READ OK bloque=graninquisidor_block_23 a 127.0.0.1:56605 (size=1024)
+2025-11-24T12:56:55.7448816-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7448173-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56605
+2025-11-24T12:56:55.7448815-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7448175-03:00 [client] [DEBUG] Bloque graninquisidor_block_23 leído correctamente desde localhost:4001 (size=1024)
+2025-11-24T12:56:55.7448887-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7448321-03:00 [client] [DEBUG] Intentando leer bloque graninquisidor_block_24 desde localhost:4001
+2025-11-24T12:56:55.7453157-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7452764-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56606
+2025-11-24T12:56:55.7453246-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7452989-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56606
+2025-11-24T12:56:55.7453363-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7453117-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56606: "READ graninquisidor_block_24"
+2025-11-24T12:56:55.7453436-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.745325-03:00 [datanode-4001] [INFO] READ bloque=graninquisidor_block_24 desde 127.0.0.1:56606
+2025-11-24T12:56:55.7454972-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7454658-03:00 [datanode-4001] [DEBUG] fileDataNode: RetrieveBlock OK id=graninquisidor_block_24 path=data/graninquisidor_block_24 size=1024
+2025-11-24T12:56:55.7455197-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7454943-03:00 [datanode-4001] [DEBUG] READ OK bloque=graninquisidor_block_24 a 127.0.0.1:56606 (size=1024)
+2025-11-24T12:56:55.7455707-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7455394-03:00 [client] [DEBUG] Bloque graninquisidor_block_24 leído correctamente desde localhost:4001 (size=1024)
+2025-11-24T12:56:55.7455793-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7455599-03:00 [client] [DEBUG] Intentando leer bloque graninquisidor_block_25 desde localhost:4001
+2025-11-24T12:56:55.7583121-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7463916-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56606
+2025-11-24T12:56:55.758473-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7583981-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56607
+2025-11-24T12:56:55.7584791-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7584282-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56607
+2025-11-24T12:56:55.7584816-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7584407-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56607: "READ graninquisidor_block_25"
+2025-11-24T12:56:55.7584839-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7584508-03:00 [datanode-4001] [INFO] READ bloque=graninquisidor_block_25 desde 127.0.0.1:56607
+2025-11-24T12:56:55.7588926-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7587714-03:00 [datanode-4001] [DEBUG] fileDataNode: RetrieveBlock OK id=graninquisidor_block_25 path=data/graninquisidor_block_25 size=1024
+2025-11-24T12:56:55.7588993-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7587886-03:00 [datanode-4001] [DEBUG] READ OK bloque=graninquisidor_block_25 a 127.0.0.1:56607 (size=1024)
+2025-11-24T12:56:55.7589099-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7588808-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56607
+2025-11-24T12:56:55.7589192-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7588199-03:00 [client] [DEBUG] Bloque graninquisidor_block_25 leído correctamente desde localhost:4001 (size=1024)
+2025-11-24T12:56:55.7589239-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7588516-03:00 [client] [DEBUG] Intentando leer bloque graninquisidor_block_26 desde localhost:4001
+2025-11-24T12:56:55.7594659-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7593312-03:00 [datanode-4001] [INFO] Nueva conexión al Datanode desde 127.0.0.1:56608
+2025-11-24T12:56:55.7594755-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7593533-03:00 [datanode-4001] [DEBUG] handleConn iniciado para 127.0.0.1:56608
+2025-11-24T12:56:55.7594789-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7593671-03:00 [datanode-4001] [DEBUG] Datanode recibió de 127.0.0.1:56608: "READ graninquisidor_block_26"
+2025-11-24T12:56:55.7594887-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7593779-03:00 [datanode-4001] [INFO] READ bloque=graninquisidor_block_26 desde 127.0.0.1:56608
+2025-11-24T12:56:55.759505-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7594572-03:00 [datanode-4001] [DEBUG] fileDataNode: RetrieveBlock OK id=graninquisidor_block_26 path=data/graninquisidor_block_26 size=826
+2025-11-24T12:56:55.7595074-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7594744-03:00 [datanode-4001] [DEBUG] READ OK bloque=graninquisidor_block_26 a 127.0.0.1:56608 (size=826)
+2025-11-24T12:56:55.7596405-03:00 [127.0.0.1:56511] 2025-11-24T12:56:55.7596102-03:00 [datanode-4001] [DEBUG] Conexión cerrada desde 127.0.0.1:56608
+2025-11-24T12:56:55.7596653-03:00 [127.0.0.1:56581] 2025-11-24T12:56:55.7595957-03:00 [client] [DEBUG] Bloque graninquisidor_block_26 leído correctamente desde localhost:4001 (size=826)
