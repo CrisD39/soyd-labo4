@@ -7,33 +7,24 @@ import (
 	"dfs/internal/metadata"
 )
 
-
 const (
 	BlockSize         int64 = 1024
 	ReplicationFactor       = 3
 )
 
 type Namenode interface {
-	
 	HandlePut(filename string, sizeBytes int64) ([]metadata.BlockLocation, error)
-
-	
 	HandleGet(filename string) ([]metadata.BlockLocation, bool, error)
-
-
 	HandleInfo(filename string) ([]metadata.BlockLocation, bool, error)
-
 	HandleList() ([]string, error)
+	HandleDelete(filename string) (bool, error)
 }
-
-
 
 type namenode struct {
 	store     metadata.Store
-	dataNodes []string 
-	nextIndex int    
+	dataNodes []string
+	nextIndex int
 }
-
 
 func NewService(store metadata.Store, dataNodes []string) Namenode {
 	if len(dataNodes) == 0 {
@@ -48,7 +39,6 @@ func NewService(store metadata.Store, dataNodes []string) Namenode {
 		nextIndex: 0,
 	}
 }
-
 
 func (s *namenode) pickDataNodes(n int) []string {
 	if len(s.dataNodes) == 0 || n <= 0 {
@@ -66,12 +56,10 @@ func (s *namenode) pickDataNodes(n int) []string {
 		replicas = append(replicas, s.dataNodes[idx])
 	}
 
-	
 	s.nextIndex = (s.nextIndex + n) % len(s.dataNodes)
 
 	return replicas
 }
-
 
 func (s *namenode) HandlePut(filename string, sizeBytes int64) ([]metadata.BlockLocation, error) {
 	if sizeBytes <= 0 {
@@ -80,7 +68,6 @@ func (s *namenode) HandlePut(filename string, sizeBytes int64) ([]metadata.Block
 	}
 
 	dfslog.Infof("HandlePut: filename=%s size=%d", filename, sizeBytes)
-
 
 	numBlocks64 := (sizeBytes + BlockSize - 1) / BlockSize
 	numBlocks := int(numBlocks64)
@@ -143,4 +130,27 @@ func (s *namenode) HandleList() ([]string, error) {
 	}
 	dfslog.Infof("HandleList: se encontraron %d archivos", len(files))
 	return files, nil
+}
+
+func (s *namenode) HandleDelete(filename string) (bool, error) {
+	dfslog.Infof("HandleDelete: filename=%s", filename)
+
+	_, exists := s.store.GetFile(filename)
+	if !exists {
+		dfslog.Infof("HandleDelete: archivo %s no existe", filename)
+		return false, nil
+	}
+
+	if err := s.store.DeleteFile(filename); err != nil {
+		dfslog.Errorf("HandleDelete: error borrando metadata para %s: %v", filename, err)
+		return false, err
+	}
+
+	if err := s.store.Save(); err != nil {
+		dfslog.Errorf("HandleDelete: error persistiendo metadata para %s: %v", filename, err)
+		return false, err
+	}
+
+	dfslog.Infof("HandleDelete: archivo %s eliminado de metadata", filename)
+	return true, nil
 }

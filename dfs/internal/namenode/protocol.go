@@ -1,6 +1,5 @@
 package namenode
 
-
 import (
 	"bufio"
 	"encoding/json"
@@ -9,9 +8,8 @@ import (
 	"strconv"
 	"strings"
 
-	dfslog "dfs/internal/logger" 
+	dfslog "dfs/internal/logger"
 )
-
 
 type PutBlock struct {
 	BlockID  string   `json:"block_id"`
@@ -142,7 +140,7 @@ func (s *tcpServer) handleConn(conn net.Conn) {
 
 			resp := PutResponse{
 				FileName:  filename,
-				BlockSize: BlockSize, 
+				BlockSize: BlockSize,
 				Blocks:    blocks,
 				Status:    "OK",
 			}
@@ -156,6 +154,29 @@ func (s *tcpServer) handleConn(conn net.Conn) {
 
 			dfslog.Debugf("Enviando METADATA PUT para %s a %s", filename, remote)
 			conn.Write([]byte("METADATA " + string(data) + "\n"))
+
+		case "DELETE":
+			if len(fields) != 2 {
+				dfslog.Errorf("DELETE inválido desde %s: %q", remote, line)
+				conn.Write([]byte("ERROR DELETE usage: DELETE <filename>\n"))
+				continue
+			}
+			filename := fields[1]
+
+			dfslog.Infof("HandleDelete TCP: filename=%s desde %s", filename, remote)
+			exists, err := s.service.HandleDelete(filename)
+			if err != nil {
+				dfslog.Errorf("HandleDelete falló para %s: %v", filename, err)
+				conn.Write([]byte("ERROR deleting file\n"))
+				continue
+			}
+			if !exists {
+				dfslog.Infof("DELETE: archivo no encontrado %s (desde %s)", filename, remote)
+				conn.Write([]byte("NOT_FOUND\n"))
+				continue
+			}
+
+			conn.Write([]byte("OK\n"))
 
 		case "GET":
 			if len(fields) != 2 {
@@ -179,10 +200,9 @@ func (s *tcpServer) handleConn(conn net.Conn) {
 				continue
 			}
 
-		
 			resp := PutResponse{
 				FileName:  filename,
-				BlockSize: BlockSize, 
+				BlockSize: BlockSize,
 				Blocks:    make([]PutBlock, len(locations)),
 				Status:    "OK",
 			}

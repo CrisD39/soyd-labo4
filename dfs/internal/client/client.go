@@ -33,7 +33,9 @@ type Client interface {
 	Info(remoteName string) error
 	List() ([]string, error)
 	Ping() (string, error)
+	Delete(remoteName string) error
 }
+
 
 type tcpClient struct {
 	addr string
@@ -141,6 +143,29 @@ func (c *tcpClient) Put(localPath string, remoteName string) error {
 
 	return nil
 }
+
+func (c *tcpClient) Delete(remoteName string) error {
+	cmd := fmt.Sprintf("DELETE %s", remoteName)
+
+	resp, err := c.sendCommand(cmd)
+	if err != nil {
+		return fmt.Errorf("error enviando DELETE al namenode: %w", err)
+	}
+
+	if resp == "NOT_FOUND" {
+		return fmt.Errorf("archivo no encontrado en namenode: %s", remoteName)
+	}
+	if strings.HasPrefix(resp, "ERROR") {
+		return fmt.Errorf("namenode respondió error: %s", resp)
+	}
+	if resp != "OK" {
+		return fmt.Errorf("respuesta inesperada del namenode a DELETE: %s", resp)
+	}
+
+	dfslog.Infof("DELETE completado: archivo %s eliminado en namenode", remoteName)
+	return nil
+}
+
 
 func (c *tcpClient) uploadBlock(b BlockPlan, data []byte) error {
 	if len(b.Replicas) == 0 {

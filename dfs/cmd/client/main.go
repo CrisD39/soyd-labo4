@@ -32,6 +32,8 @@ func main() {
 		fmt.Println("  client info <remoteName>")
 		fmt.Println("  client put <localPath> <remoteName>")
 		fmt.Println("  client get <remoteName> <localPath>")
+		fmt.Println("  client delete <remoteName>")
+
 		return
 	}
 
@@ -51,6 +53,19 @@ func main() {
 		}
 
 		fmt.Println("respuesta de ping:", resp)
+
+	case "delete":
+		if len(os.Args) != 3 {
+			log.Fatal("uso: client delete <remoteName>")
+		}
+		remote := os.Args[2]
+		dfslog.Infof("ejecutando delete(%s)", remote)
+
+		if err := c.Delete(remote); err != nil {
+			dfslog.Errorf("error en delete(%s): %v", remote, err)
+			log.Fatal(err)
+		}
+		dfslog.Infof("delete completado para %s", remote)
 
 	case "ls":
 		dfslog.Infof("ejecutando ls()")

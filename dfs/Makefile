@@ -9,6 +9,7 @@ APP_WEBCLIENT := webclient
 DATANODE_ID ?= d2
 
 
+
 CMD_NAMENODE := ./cmd/namenode
 CMD_CLIENT   := ./cmd/client
 CMD_DATANODE := ./cmd/datanode

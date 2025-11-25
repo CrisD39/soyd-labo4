@@ -1,14 +1,4 @@
 {
-  "Jorge": [
-    {
-      "block_id": "block1",
-      "replicas": null
-    },
-    {
-      "block_id": "block2",
-      "replicas": null
-    }
-  ],
   "SEGUNDO": [
     {
       "block_id": "block1",
@@ -282,15 +272,6 @@
     },
     {
       "block_id": "graninquisidor_block_26",
-      "replicas": [
-        "localhost:4001",
-        "localhost:4002"
-      ]
-    }
-  ],
-  "hola": [
-    {
-      "block_id": "hola_block_1",
       "replicas": [
         "localhost:4001",
         "localhost:4002"
