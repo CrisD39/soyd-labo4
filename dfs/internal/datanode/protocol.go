@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	dfslog "dfs/internal/logger" // 👈 nuevo import
+	dfslog "dfs/internal/logger" 
 )
 
 type Server interface {
@@ -18,13 +18,13 @@ type Server interface {
 
 type tcpServer struct {
 	addr string
-	node DataNode // interfaz de almacenamiento
+	node DataNode
 	ln   net.Listener
 }
 
 func NewTCPServer(addr string, node DataNode) Server {
 	return &tcpServer{
-		addr: addr, // ej: ":4001"
+		addr: addr, 
 		node: node,
 	}
 }
@@ -72,7 +72,6 @@ func (s *tcpServer) handleConn(conn net.Conn) {
 	for {
 		line, err := reader.ReadString('\n')
 		if err != nil {
-			// EOF normal cuando el cliente cierra
 			if err != io.EOF {
 				dfslog.Errorf("Error leyendo comando desde %s: %v", remote, err)
 			} else {
@@ -118,7 +117,7 @@ func (s *tcpServer) handleConn(conn net.Conn) {
 
 			dfslog.Infof("WRITE bloque=%s size=%d desde %s", blockID, size, remote)
 
-			// Leer exactamente <size> bytes del bloque
+		
 			data := make([]byte, size)
 			if _, err := io.ReadFull(reader, data); err != nil {
 				dfslog.Errorf("Error leyendo datos del bloque %s desde %s: %v", blockID, remote, err)
@@ -126,7 +125,6 @@ func (s *tcpServer) handleConn(conn net.Conn) {
 				continue
 			}
 
-			// Guardar bloque usando tu DataNode
 			if err := s.node.StoreBlock(blockID, data); err != nil {
 				dfslog.Errorf("Error almacenando bloque %s: %v", blockID, err)
 				conn.Write([]byte("ERROR storing block\n"))
@@ -137,7 +135,6 @@ func (s *tcpServer) handleConn(conn net.Conn) {
 			conn.Write([]byte("OK\n"))
 
 		case "READ":
-			// Esperamos: READ <blockID>
 			if len(fields) != 2 {
 				dfslog.Errorf("READ inválido desde %s: %q", remote, line)
 				conn.Write([]byte("ERROR READ usage: READ <blockID>\n"))
@@ -154,7 +151,6 @@ func (s *tcpServer) handleConn(conn net.Conn) {
 				continue
 			}
 
-			// Enviar: DATA <size>\n<bytes>
 			header := fmt.Sprintf("DATA %d\n", len(data))
 			if _, err := conn.Write([]byte(header)); err != nil {
 				dfslog.Errorf("Error enviando header DATA para %s a %s: %v", blockID, remote, err)

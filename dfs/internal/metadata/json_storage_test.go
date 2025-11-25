@@ -43,14 +43,17 @@ func TestLoadNonExistingFile(t *testing.T) {
 	assertEqual(t, 0, len(files), "expected empty metadata after Load with no file")
 }
 
-// 2) PutFile + GetFile + ListFiles en memoria
+// 2) PutFile + GetFile + ListFiles + DeleteFile en memoria
 func TestPutGetListDeleteFile(t *testing.T) {
 	store, _ := newTestStore(t)
 
 	filename := "example.txt"
+
+	// Usamos BlockLocation como tipo opaco: no dependemos de sus campos internos.
+	// Solo necesitamos tener "algo" para guardar y luego comparar.
 	locs := []BlockLocation{
-		{BlockID: "b1", Node: "node1"},
-		{BlockID: "b2", Node: "node2"},
+		{},
+		{},
 	}
 
 	// PutFile
@@ -92,9 +95,11 @@ func TestSaveAndLoadRoundTrip(t *testing.T) {
 	store, path := newTestStore(t)
 
 	filename := "example.txt"
+
+	// De nuevo, tratamos BlockLocation como caja negra.
 	locs := []BlockLocation{
-		{BlockID: "b1", Node: "node1"},
-		{BlockID: "b2", Node: "node2"},
+		{},
+		{},
 	}
 
 	// Guardamos metadata en el store

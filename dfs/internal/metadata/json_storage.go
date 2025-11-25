@@ -8,7 +8,7 @@ import (
 
 type JSONStore struct {
 	path string
-	mtx  sync.Mutex // lo dejo mutex pero podria usar RWMutex
+	mtx  sync.Mutex 
 	data MetadataTable
 }
 
@@ -26,14 +26,12 @@ func (s *JSONStore) Load() error {
 	info, err := os.Stat(s.path)
 	if err != nil {
 		if os.IsNotExist(err) {
-			// El archivo no existe, inicializar tabla vacía
 			s.data = make(MetadataTable)
 			return nil
 		}
 		return err
 	}
 
-	// si existe pero está vacío, inicalizo tabla vacia
 	if info.Size() == 0 {
 		s.data = make(MetadataTable)
 		return nil
@@ -44,9 +42,9 @@ func (s *JSONStore) Load() error {
 		return err
 	}
 
-	// deserializar JSON
+
 	s.data = make(MetadataTable)
-	if err := json.Unmarshal(content, &s.data); err != nil { // deserializo en la estructura
+	if err := json.Unmarshal(content, &s.data); err != nil { 
 		return err
 	}
 
@@ -57,7 +55,7 @@ func (s *JSONStore) Save() error {
 	s.mtx.Lock()
 	defer s.mtx.Unlock()
 
-	content, err := json.MarshalIndent(s.data, "", "  ") //serializo a JSON
+	content, err := json.MarshalIndent(s.data, "", "  ")
 	if err != nil {
 		return err
 	}
@@ -97,6 +95,5 @@ func (s *JSONStore) DeleteFile(name string) error {
 	defer s.mtx.Unlock()
 
 	delete(s.data, name)
-	// idem: acá podrías llamar a s.Save()
 	return nil
 }

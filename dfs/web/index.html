@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>DFS – Archivos (cliente web)</title>
+
+  <!-- 👇 importante: linkea el CSS externo -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- 👇 y el JS externo -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>Archivos en el DFS </h1>
+
+  <section id="upload-section">
+    <h2>Subir archivo</h2>
+
+    <form id="upload-form">
+      <label for="remote-name">
+        Nombre con el que se va a subir:
+      </label>
+      <input
+        type="text"
+        id="remote-name"
+        name="remote"
+        placeholder="ej: backup.txt"
+        autocomplete="off"
+      />
+
+      <div id="dropzone">
+        Arrastrá un archivo acá o hacé clic para seleccionarlo
+      </div>
+
+      <!-- input file oculto -->
+      <input type="file" id="file-input" name="file" style="display:none" />
+
+      <div id="upload-file-info"></div>
+
+      <button type="submit" id="upload-button">Subir archivo</button>
+    </form>
+  </section>
+
+ <div class="actions-row">
+  <button id="refresh">Actualizar lista</button>
+  <div id="status"></div>
+</div>
+
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre de archivo</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="files-body">
+      <!-- filas generadas por JS -->
+    </tbody>
+  </table>
+</body>
+</html>

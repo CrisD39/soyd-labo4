@@ -1,0 +1,29 @@
+{
+  "logger": {
+    "listenAddr": "127.0.0.1:7000"
+  },
+  "namenode": {
+    "httpAddr": "127.0.0.1:8080",
+    "tcpAddr": "127.0.0.1:3000",
+    "loggerAddr": "127.0.0.1:7000"
+  },
+  "client": {
+    "namenodeTcpAddr": "127.0.0.1:3000",
+    "namenodeHttpAddr": "127.0.0.1:8080",
+    "loggerAddr": "127.0.0.1:3000"
+  },
+  "datanodes": [
+    {
+      "id": "d1",
+      "listenAddr": "127.0.0.1:4001",
+      "loggerAddr": "127.0.0.1:7000",
+      "storagePath": "./data/d1"
+    },
+    {
+      "id": "d2",
+      "listenAddr": "127.0.0.1:4002",
+      "loggerAddr": "127.0.0.1:7000",
+      "storagePath": "./data/d2"
+    }
+  ]
+}

@@ -7,24 +7,22 @@ import (
 	"net/http"
 	"os"
 
-	"dfs/internal/logger" // ✅ usamos el logger central
+	"dfs/internal/config"
+	dfslog "dfs/internal/logger"
 	"dfs/internal/metadata"
 	"dfs/internal/namenode"
 )
 
-// Representa un datanode en la config
 type DataNodeConfig struct {
 	ID   string `json:"id"`
 	Host string `json:"host"`
 	Port int    `json:"port"`
 }
 
-// Representa el JSON completo
 type ClusterConfig struct {
 	Nodes []DataNodeConfig `json:"nodes"`
 }
 
-// Lee datanodes.json y lo convierte a []string "host:port"
 func loadDataNodesFromFile(path string) ([]string, error) {
 	bytes, err := os.ReadFile(path)
 	if err != nil {
@@ -49,13 +47,11 @@ func loadDataNodesFromFile(path string) ([]string, error) {
 	return addrs, nil
 }
 
-// Request que manda el cliente HTTP
 type putPlanRequest struct {
 	Filename  string `json:"filename"`
 	SizeBytes int64  `json:"size_bytes"`
 }
 
-// Respuesta que devuelve el namenode HTTP
 type putPlanResponse struct {
 	Filename  string                   `json:"filename"`
 	BlockSize int64                    `json:"block_size"`
@@ -63,21 +59,27 @@ type putPlanResponse struct {
 }
 
 func main() {
-	// 0) Inicializar logger remoto (servidor de logs en localhost:5000)
-	if err := dfslog.Init("namenode", "localhost:5000"); err != nil {
-		// Si falla la conexión al log server, al menos lo avisamos.
+	cfg, err := config.Load("config.json")
+	if err != nil {
+		log.Fatalf("no se pudo cargar config.json: %v", err)
+	}
+
+	loggerAddr := cfg.Namenode.LoggerAddr
+	if loggerAddr == "" {
+		loggerAddr = ":5000"
+	}
+
+	if err := dfslog.Init("namenode", loggerAddr); err != nil {
 		log.Printf("dfslog: no se pudo conectar al log server: %v", err)
 	}
 	dfslog.Infof("NameNode iniciando...")
 
-	// 1) Store de metadata
 	store := metadata.NewJSONStore("metadata.json")
 	if err := store.Load(); err != nil {
 		dfslog.Errorf("error cargando metadata: %v", err)
 		log.Fatalf("error cargando metadata: %v", err)
 	}
 
-	// 2) Lista de datanodes (host:port) desde datanodes.json
 	dataNodes, err := loadDataNodesFromFile("datanodes.json")
 	if err != nil {
 		dfslog.Errorf("error cargando datanodes: %v", err)
@@ -85,18 +87,24 @@ func main() {
 	}
 	dfslog.Infof("DataNodes configurados: %v", dataNodes)
 
-	// 3) Crear servicio de namenode
 	nn := namenode.NewService(store, dataNodes)
 
-	// 4) Levantar servidor TCP del namenode (PUT/GET/LS/INFO/PING)
-	tcpServer := namenode.NewTCPServer(":3000", nn)
+	tcpAddr := cfg.Namenode.TCPAddr
+	if tcpAddr == "" {
+		tcpAddr = ":3000"
+	}
+	tcpServer := namenode.NewTCPServer(tcpAddr, nn)
 	if err := tcpServer.Start(); err != nil {
 		dfslog.Errorf("error iniciando servidor TCP del namenode: %v", err)
 		log.Fatalf("error iniciando servidor TCP del namenode: %v", err)
 	}
-	dfslog.Infof("NameNode TCP escuchando en :3000")
+	dfslog.Infof("NameNode TCP escuchando en %s", tcpAddr)
 
-	// 5) Handler HTTP para /files/plan
+	httpAddr := cfg.Namenode.HTTPAddr
+	if httpAddr == "" {
+		httpAddr = ":8080"
+	}
+
 	http.HandleFunc("/files/plan", func(w http.ResponseWriter, r *http.Request) {
 		dfslog.Infof("HTTP %s %s desde %s", r.Method, r.URL.Path, r.RemoteAddr)
 
@@ -127,7 +135,7 @@ func main() {
 
 		resp := putPlanResponse{
 			Filename:  req.Filename,
-			BlockSize: namenode.BlockSize, // constante del package
+			BlockSize: namenode.BlockSize,
 			Blocks:    blocks,
 		}
 
@@ -141,15 +149,13 @@ func main() {
 		}
 	})
 
-	// 6) Servidor HTTP en otra goroutine
 	go func() {
-		dfslog.Infof("NameNode HTTP escuchando en :8080")
-		if err := http.ListenAndServe(":8080", nil); err != nil {
+		dfslog.Infof("NameNode HTTP escuchando en %s", httpAddr)
+		if err := http.ListenAndServe(httpAddr, nil); err != nil {
 			dfslog.Errorf("error en servidor HTTP: %v", err)
 			log.Fatalf("error en servidor HTTP: %v", err)
 		}
 	}()
 
-	// 7) Mantener el proceso vivo
 	select {}
 }

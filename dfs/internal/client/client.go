@@ -12,7 +12,7 @@ import (
 	"strconv"
 	"strings"
 
-	"dfs/internal/logger" // 👈 usamos el mismo logger que en namenode/datanode
+	dfslog "dfs/internal/logger" // 👈 usamos el mismo logger que en namenode/datanode
 )
 
 type PutPlan struct {
@@ -32,7 +32,7 @@ type Client interface {
 	Get(remoteName string, localPath string) error
 	Info(remoteName string) error
 	List() ([]string, error)
-	Ping() error
+	Ping() (string, error)
 }
 
 type tcpClient struct {
@@ -63,18 +63,16 @@ func (c *tcpClient) sendCommand(line string) (string, error) {
 	return response, nil
 }
 
-func (c *tcpClient) Ping() error {
+func (c *tcpClient) Ping() (string, error) {
 	resp, err := c.sendCommand("PING")
 	if err != nil {
-		return fmt.Errorf("error enviando PING al servidor (%s): %w", c.addr, err)
+		return "", fmt.Errorf("error enviando PING al servidor (%s): %w", c.addr, err)
 	}
-	// Antes: fmt.Println("Respuesta PING:", resp)
 	dfslog.Infof("Respuesta PING del namenode (%s): %s", c.addr, resp)
-	return nil
+	return resp, nil
 }
 
 func (c *tcpClient) Put(localPath string, remoteName string) error {
-	// 1) Leer archivo completo (para el TP está bien; luego podemos streamear)
 	data, err := os.ReadFile(localPath)
 	if err != nil {
 		return fmt.Errorf("error leyendo archivo local %q: %w", localPath, err)
@@ -83,7 +81,6 @@ func (c *tcpClient) Put(localPath string, remoteName string) error {
 	sizeBytes := len(data)
 	dfslog.Infof("Iniciando PUT local=%s remote=%s size=%d bytes", localPath, remoteName, sizeBytes)
 
-	// 2) Avisar al NameNode que queremos hacer PUT de este tamaño
 	cmd := fmt.Sprintf("PUT %s %d", remoteName, sizeBytes)
 
 	resp, err := c.sendCommand(cmd)
@@ -99,7 +96,6 @@ func (c *tcpClient) Put(localPath string, remoteName string) error {
 		return fmt.Errorf("respuesta inesperada del namenode (se esperaba METADATA): %s", resp)
 	}
 
-	// 3) Parsear el JSON con el plan de bloques
 	metaJSON := strings.TrimPrefix(resp, "METADATA ")
 
 	var plan PutPlan
@@ -119,7 +115,6 @@ func (c *tcpClient) Put(localPath string, remoteName string) error {
 	dfslog.Infof("Plan de PUT recibido: file=%s block_size=%d blocks=%d",
 		plan.FileName, blockSize, len(plan.Blocks))
 
-	// 4) Para cada bloque del plan, recortar los bytes y subirlos a sus réplicas
 	for i, b := range plan.Blocks {
 		start := i * blockSize
 		end := start + blockSize
@@ -128,7 +123,7 @@ func (c *tcpClient) Put(localPath string, remoteName string) error {
 			return fmt.Errorf("plan inconsistente: bloque %d empieza fuera del archivo", i)
 		}
 		if end > len(data) {
-			end = len(data) // último bloque puede ser más chico
+			end = len(data)
 		}
 
 		blockData := data[start:end]
@@ -141,7 +136,6 @@ func (c *tcpClient) Put(localPath string, remoteName string) error {
 		}
 	}
 
-	// Antes: fmt.Printf("Archivo %s subido en %d bloques con replicación.\n", ...)
 	dfslog.Infof("PUT completado: archivo %s subido en %d bloques con replicación",
 		remoteName, len(plan.Blocks))
 
@@ -163,13 +157,6 @@ func (c *tcpClient) uploadBlock(b BlockPlan, data []byte) error {
 	return nil
 }
 
-// storeToDataNode abre una conexión con un DataNode y le envía el bloque.
-// Protocolo:
-//
-//	WRITE <blockID> <size>\n
-//	<size bytes de datos>
-//
-// El DataNode responde "OK\n" si todo salió bien.
 func storeToDataNode(addr, blockID string, data []byte) error {
 	conn, err := net.Dial("tcp", addr)
 	if err != nil {
@@ -218,7 +205,6 @@ func (c *tcpClient) Get(remoteName string, localPath string) error {
 	}
 
 	metaJSON := strings.TrimPrefix(resp, "METADATA ")
-	// Antes: fmt.Println("metaJSON desde GET:", metaJSON)
 	dfslog.Debugf("METADATA recibido en GET para %s: %s", remoteName, metaJSON)
 
 	var plan PutPlan
@@ -232,7 +218,6 @@ func (c *tcpClient) Get(remoteName string, localPath string) error {
 
 	dfslog.Infof("Plan de GET: file=%s blocks=%d", plan.FileName, len(plan.Blocks))
 
-	// Reconstruimos el archivo concatenando los bloques en orden
 	var buf bytes.Buffer
 
 	for _, b := range plan.Blocks {
@@ -243,7 +228,6 @@ func (c *tcpClient) Get(remoteName string, localPath string) error {
 		var blockData []byte
 		var lastErr error
 
-		// Intentar leer de alguna réplica (por ahora, primera; si falla, probamos otras)
 		for _, addr := range b.Replicas {
 			dfslog.Debugf("Intentando leer bloque %s desde %s", b.BlockID, addr)
 			blockData, lastErr = readFromDataNode(addr, b.BlockID)
@@ -251,7 +235,6 @@ func (c *tcpClient) Get(remoteName string, localPath string) error {
 				dfslog.Debugf("Bloque %s leído correctamente desde %s (size=%d)", b.BlockID, addr, len(blockData))
 				break
 			}
-			// Antes: fmt.Printf("WARN: fallo leer bloque...)\n"
 			dfslog.Infof("WARN: fallo leer bloque %s desde %s: %v", b.BlockID, addr, lastErr)
 		}
 
@@ -264,26 +247,16 @@ func (c *tcpClient) Get(remoteName string, localPath string) error {
 		}
 	}
 
-	// Escribir archivo reconstruido en disco
 	if err := os.WriteFile(localPath, buf.Bytes(), 0o644); err != nil {
 		return fmt.Errorf("error escribiendo archivo local %q: %w", localPath, err)
 	}
 
-	// Antes: fmt.Printf("Archivo %s reconstruido en %s (%d bytes).\n", ...)
 	dfslog.Infof("GET completado: archivo %s reconstruido en %s (%d bytes)",
 		remoteName, localPath, buf.Len())
 
 	return nil
 }
 
-// readFromDataNode pide un bloque a un DataNode usando:
-//
-//	READ <blockID>\n
-//
-// y espera:
-//
-//	DATA <size>\n
-//	<size bytes>
 func readFromDataNode(addr, blockID string) ([]byte, error) {
 	conn, err := net.Dial("tcp", addr)
 	if err != nil {
@@ -336,10 +309,8 @@ func (c *tcpClient) Info(remoteName string) error {
 		return fmt.Errorf("namenode respondió error: %s", resp)
 	}
 
-	// Antes: fmt.Println("Respuesta INFO:", resp)
 	dfslog.Infof("Respuesta INFO para %s: %s", remoteName, resp)
 
-	// Más adelante: parsear METADATA y mostrar algo más lindo (cantidad de bloques, nodos, etc.).
 	return nil
 }
 
@@ -353,7 +324,6 @@ func (c *tcpClient) List() ([]string, error) {
 		return nil, fmt.Errorf("namenode respondió error: %s", resp)
 	}
 
-	// Formato esperado: "KEYS a.txt b.txt c.txt"
 	parts := strings.Fields(resp)
 	if len(parts) == 0 {
 		return nil, fmt.Errorf("respuesta vacía del namenode")
@@ -364,7 +334,6 @@ func (c *tcpClient) List() ([]string, error) {
 	}
 
 	if len(parts) == 1 {
-		// "KEYS" solo → ningún archivo
 		dfslog.Infof("LS: el namenode no tiene archivos registrados")
 		return []string{}, nil
 	}

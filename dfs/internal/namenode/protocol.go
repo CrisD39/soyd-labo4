@@ -1,6 +1,6 @@
 package namenode
 
-// protocol.go namenode TCP
+
 import (
 	"bufio"
 	"encoding/json"
@@ -9,11 +9,10 @@ import (
 	"strconv"
 	"strings"
 
-	dfslog "dfs/internal/logger" // 👈 nuevo import
+	dfslog "dfs/internal/logger" 
 )
 
-// Respuesta que el namenode le envía al cliente cuando hace un PUT.
-// Es lo que después va a parsear el cliente.
+
 type PutBlock struct {
 	BlockID  string   `json:"block_id"`
 	Replicas []string `json:"replicas"`
@@ -23,7 +22,7 @@ type PutResponse struct {
 	FileName  string     `json:"file_name"`
 	BlockSize int64      `json:"block_size"`
 	Blocks    []PutBlock `json:"blocks"`
-	Status    string     `json:"status"` // <--- nuevo
+	Status    string     `json:"status"`
 }
 
 type Server interface {
@@ -68,7 +67,6 @@ func (s *tcpServer) acceptLoop() {
 	for {
 		conn, err := s.ln.Accept()
 		if err != nil {
-			// si se cerró el listener, lo registramos y salimos
 			dfslog.Errorf("TCP accept error: %v", err)
 			return
 		}
@@ -85,10 +83,8 @@ func (s *tcpServer) handleConn(conn net.Conn) {
 	reader := bufio.NewReader(conn)
 
 	for {
-		// leer hasta un enter
 		line, err := reader.ReadString('\n')
 		if err != nil {
-			// normalmente va a ser EOF cuando el cliente cierra
 			dfslog.Debugf("Conexión cerrada desde %s: %v", remote, err)
 			return
 		}
@@ -136,18 +132,17 @@ func (s *tcpServer) handleConn(conn net.Conn) {
 				continue
 			}
 
-			// Armamos el JSON METADATA para el cliente.
 			blocks := make([]PutBlock, len(locations))
 			for i, loc := range locations {
 				blocks[i] = PutBlock{
 					BlockID:  loc.BlockID,
-					Replicas: append([]string(nil), loc.Replicas...), // futuro: varios nodos
+					Replicas: append([]string(nil), loc.Replicas...),
 				}
 			}
 
 			resp := PutResponse{
 				FileName:  filename,
-				BlockSize: BlockSize, // constante definida en namenode.go
+				BlockSize: BlockSize, 
 				Blocks:    blocks,
 				Status:    "OK",
 			}
@@ -184,10 +179,10 @@ func (s *tcpServer) handleConn(conn net.Conn) {
 				continue
 			}
 
-			// Armamos el mismo JSON que en PUT
+		
 			resp := PutResponse{
 				FileName:  filename,
-				BlockSize: BlockSize, // misma constante que usás en PUT
+				BlockSize: BlockSize, 
 				Blocks:    make([]PutBlock, len(locations)),
 				Status:    "OK",
 			}

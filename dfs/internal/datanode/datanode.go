@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"sync"
 
-	"dfs/internal/logger" // 👈 nuevo import
+	"dfs/internal/logger" 
 )
 
 var ErrBlockNotFound = errors.New("block not found")
@@ -28,12 +28,11 @@ func NewMemoryDataNode() DataNode {
 	}
 }
 
-// StoreBlock guarda (o sobreescribe) un bloque en el mapa
+
 func (m *memoryDataNode) StoreBlock(blockID string, data []byte) error {
 	m.mtx.Lock()
 	defer m.mtx.Unlock()
 
-	// hacemos copia para no depender del slice externo
 	buf := make([]byte, len(data))
 	copy(buf, data)
 
@@ -42,7 +41,7 @@ func (m *memoryDataNode) StoreBlock(blockID string, data []byte) error {
 	return nil
 }
 
-// RetrieveBlock devuelve una copia del bloque si existe
+
 func (m *memoryDataNode) RetrieveBlock(blockID string) ([]byte, error) {
 	m.mtx.RLock()
 	defer m.mtx.RUnlock()
@@ -65,8 +64,7 @@ type fileDataNode struct {
 	mtx     sync.RWMutex
 }
 
-// NewFileDataNode crea un DataNode que guarda cada bloque como un archivo
-// dentro de baseDir (por ejemplo "./data").
+
 func NewFileDataNode(baseDir string) (DataNode, error) {
 	if err := os.MkdirAll(baseDir, 0o755); err != nil {
 		dfslog.Errorf("fileDataNode: error creando baseDir=%s: %v", baseDir, err)
@@ -77,8 +75,6 @@ func NewFileDataNode(baseDir string) (DataNode, error) {
 }
 
 func (f *fileDataNode) blockPath(blockID string) string {
-	// Para algo más serio habría que sanear blockID,
-	// pero para el TP alcanza con Join.
 	return filepath.Join(f.baseDir, blockID)
 }
 
@@ -87,7 +83,6 @@ func (f *fileDataNode) StoreBlock(blockID string, data []byte) error {
 	defer f.mtx.Unlock()
 
 	path := f.blockPath(blockID)
-	// 0644: dueño RW, resto R
 	if err := os.WriteFile(path, data, 0o644); err != nil {
 		dfslog.Errorf("fileDataNode: error guardando bloque id=%s path=%s: %v", blockID, path, err)
 		return err

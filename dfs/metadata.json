@@ -19,6 +19,15 @@
       "replicas": null
     }
   ],
+  "ayuda.txt": [
+    {
+      "block_id": "ayuda.txt_block_1",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    }
+  ],
   "cienaños": [
     {
       "block_id": "cienaños_block_1",
@@ -80,6 +89,15 @@
     },
     {
       "block_id": "cienaños2_block_8",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    }
+  ],
+  "corraje.txt": [
+    {
+      "block_id": "corraje.txt_block_1",
       "replicas": [
         "localhost:4001",
         "localhost:4002"
@@ -264,6 +282,24 @@
     },
     {
       "block_id": "graninquisidor_block_26",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    }
+  ],
+  "hola": [
+    {
+      "block_id": "hola_block_1",
+      "replicas": [
+        "localhost:4001",
+        "localhost:4002"
+      ]
+    }
+  ],
+  "nuevoo": [
+    {
+      "block_id": "nuevoo_block_1",
       "replicas": [
         "localhost:4001",
         "localhost:4002"

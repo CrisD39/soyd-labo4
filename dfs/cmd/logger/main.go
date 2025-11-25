@@ -8,12 +8,14 @@ import (
 	"os"
 	"sync"
 	"time"
+
+	"dfs/internal/config"
 )
 
 type LogServer struct {
-	mu      sync.Mutex // protege el archivo
+	mu      sync.Mutex
 	file    *os.File
-	entries chan string // cola de mensajes
+	entries chan string
 }
 
 func NewLogServer(path string) (*LogServer, error) {
@@ -24,10 +26,9 @@ func NewLogServer(path string) (*LogServer, error) {
 
 	s := &LogServer{
 		file:    f,
-		entries: make(chan string, 1000), // cola con buffer
+		entries: make(chan string, 1000),
 	}
 
-	// Goroutine que vacía la cola y escribe al archivo
 	go s.loopWriter()
 
 	return s, nil
@@ -36,7 +37,6 @@ func NewLogServer(path string) (*LogServer, error) {
 func (s *LogServer) loopWriter() {
 	for line := range s.entries {
 		s.mu.Lock()
-		// Escribimos una línea por log (ya viene sin \n, lo agregamos acá)
 		fmt.Fprintln(s.file, line)
 		s.mu.Unlock()
 	}
@@ -50,12 +50,8 @@ func (s *LogServer) handleConn(conn net.Conn) {
 
 	for scanner.Scan() {
 		msg := scanner.Text()
-
-		// Le agregamos timestamp y origen acá (podrías hacerlo en el cliente también)
 		t := time.Now().Format(time.RFC3339Nano)
 		line := fmt.Sprintf("%s [%s] %s", t, remote, msg)
-
-		// Encolamos; si la cola se llena, esto se bloquea hasta que el writer vacíe
 		s.entries <- line
 	}
 
@@ -65,9 +61,17 @@ func (s *LogServer) handleConn(conn net.Conn) {
 }
 
 func main() {
-	// Podés hacer que lea de env o flags, acá lo dejo fijo para arrancar
-	const addr = ":5000"
-	const logPath = "dfs.log"
+	cfg, err := config.Load("config.json")
+	if err != nil {
+		log.Fatalf("no pude cargar config.json: %v", err)
+	}
+
+	addr := cfg.Logger.ListenAddr
+	if addr == "" {
+		addr = ":5000"
+	}
+
+	logPath := "dfs.log"
 
 	server, err := NewLogServer(logPath)
 	if err != nil {

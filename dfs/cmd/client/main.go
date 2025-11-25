@@ -6,19 +6,26 @@ import (
 	"os"
 
 	"dfs/internal/client"
-	"dfs/internal/logger" // <- usamos el logger central
+	"dfs/internal/config"
+	dfslog "dfs/internal/logger"
 )
 
 func main() {
-	// Inicializar logger remoto (logserver en localhost:5000)
-	if err := dfslog.Init("client", "localhost:5000"); err != nil {
-		// Si falla el logger externo, al menos avisamos por stderr
-		log.Printf("dfslog: no se pudo conectar al log server: %v", err)
+	cfg, err := config.Load("config.json")
+	if err != nil {
+		log.Fatalf("no se pudo cargar config.json: %v", err)
 	}
-	dfslog.Infof("cliente iniciado con args: %v", os.Args)
+
+	if err := dfslog.Init("client", cfg.Client.LoggerAddr); err != nil {
+		log.Printf("dfslog: no se pudo conectar al log server (%s): %v", cfg.Client.LoggerAddr, err)
+	}
+	dfslog.Infof("cliente iniciado. logger=%s, namenode=%s, args=%v",
+		cfg.Client.LoggerAddr,
+		cfg.Client.NamenodeHTTPAddr,
+		os.Args,
+	)
 
 	if len(os.Args) < 2 {
-		// Esto es “UX” para el usuario, no log del sistema
 		fmt.Println("Uso:")
 		fmt.Println("  client ping")
 		fmt.Println("  client ls")
@@ -28,7 +35,7 @@ func main() {
 		return
 	}
 
-	c := client.NewTCPClient("localhost:3000")
+	c := client.NewTCPClient(cfg.Client.NamenodeTCPAddr)
 
 	cmd := os.Args[1]
 	dfslog.Infof("comando recibido: %s", cmd)
@@ -36,10 +43,14 @@ func main() {
 	switch cmd {
 	case "ping":
 		dfslog.Infof("ejecutando ping()")
-		if err := c.Ping(); err != nil {
+
+		resp, err := c.Ping()
+		if err != nil {
 			dfslog.Errorf("error en ping: %v", err)
 			log.Fatal(err)
 		}
+
+		fmt.Println("respuesta de ping:", resp)
 
 	case "ls":
 		dfslog.Infof("ejecutando ls()")

@@ -23,8 +23,7 @@ var (
 	muConn   sync.Mutex
 )
 
-// Init establece el nombre del componente y se conecta al logserver.
-// Ej: dfslog.Init("namenode", "localhost:4000")
+
 func Init(comp, serverAddr string) error {
 	var err error
 	initOnce.Do(func() {
@@ -32,14 +31,12 @@ func Init(comp, serverAddr string) error {
 		addr = serverAddr
 		entries = make(chan logEntry, 1000)
 
-		// Intentamos una única conexión persistente
+		
 		conn, err = net.Dial("tcp", addr)
 		if err != nil {
-			// si falla, dejamos conn=nil y hacemos fallback a stderr en el writer
 			fmt.Fprintf(os.Stderr, "dfslog: no se pudo conectar a %s: %v\n", addr, err)
 		}
 
-		// Goroutine que consume la cola y escribe al socket
 		go writerLoop()
 	})
 	return err
@@ -54,14 +51,12 @@ func writerLoop() {
 		if conn != nil {
 			_, err := conn.Write([]byte(line))
 			if err != nil {
-				// si se rompe la conexión, hacemos fallback a stderr
 				fmt.Fprintf(os.Stderr, "dfslog: error escribiendo al logserver: %v\n", err)
 				_ = conn.Close()
 				conn = nil
 			}
 		}
 		if conn == nil {
-			// fallback local
 			fmt.Fprint(os.Stderr, line)
 		}
 		muConn.Unlock()
@@ -70,7 +65,6 @@ func writerLoop() {
 
 func logf(level, format string, args ...interface{}) {
 	if entries == nil {
-		// Init nunca se llamó; logueamos algo mínimo a stderr
 		line := fmt.Sprintf(format, args...)
 		fmt.Fprintf(os.Stderr, "[%s] %s\n", level, line)
 		return
